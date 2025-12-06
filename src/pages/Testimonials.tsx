@@ -1,5 +1,5 @@
 import { Layout } from "@/components/layout/Layout";
-import { Star, Quote } from "lucide-react";
+import { Star } from "lucide-react";
 
 const testimonials = [
   {
@@ -63,7 +63,7 @@ const testimonials = [
     country: "Austria",
     flag: "🇦🇹",
     rating: 5,
-    review: "Excellent communication, precise work. Highly recommended. Once again, professional work! Very good communication. Problem solver.",
+    review: "Excellent communication, precise work. Highly recommended. Professional work! Very good communication. Problem solver.",
     budget: "$100–$200",
     duration: "4 weeks",
     repeat: true,
@@ -83,7 +83,7 @@ const testimonials = [
     country: "India",
     flag: "🇮🇳",
     rating: 5,
-    review: "I gave him a custom order and asked for 24-hour delivery. He took on the challenge and completed it like a pro. He took feedback well and did a great job!",
+    review: "I gave him a custom order and asked for 24-hour delivery. He took on the challenge and completed it like a pro!",
     budget: "Up to $50",
     duration: "2 days",
   },
@@ -121,93 +121,86 @@ export default function Testimonials() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 px-4 md:px-8">
-        <div className="container-custom text-center">
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
-            What My Clients{" "}
-            <span className="gradient-text">Say</span>
+      <section className="pt-24 pb-12 md:pt-32 md:pb-16 px-4 md:px-8 border-b border-border">
+        <div className="container-custom">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up">
+            Client Reviews
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animation-delay-100">
+          <p className="text-lg text-muted-foreground max-w-2xl animate-fade-in-up animation-delay-100">
             Real reviews from real clients. See why businesses trust me with their digital marketing.
           </p>
         </div>
       </section>
 
+      {/* Stats */}
+      <section className="py-8 border-b border-border">
+        <div className="container-custom px-4 md:px-8">
+          <div className="flex flex-wrap items-center gap-8">
+            <div className="flex items-center gap-2">
+              <span className="text-2xl font-bold">4.9</span>
+              <div className="flex">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} size={16} className="fill-primary text-primary" />
+                ))}
+              </div>
+              <span className="text-muted-foreground text-sm">(50+ reviews)</span>
+            </div>
+            <div className="text-sm text-muted-foreground">
+              <span className="font-semibold text-foreground">15+</span> countries served
+            </div>
+            <div className="text-sm text-muted-foreground">
+              <span className="font-semibold text-foreground">100+</span> projects completed
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Grid */}
-      <section className="section-padding pt-0">
+      <section className="section-padding">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {testimonials.map((testimonial, index) => (
               <div
                 key={`${testimonial.name}-${index}`}
-                className="bg-card rounded-3xl p-6 md:p-8 card-hover animate-fade-in-up"
-                style={{ animationDelay: `${(index % 6) * 100}ms` }}
+                className="p-5 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors animate-fade-in-up"
+                style={{ animationDelay: `${(index % 6) * 50}ms` }}
               >
-                {/* Quote Icon */}
-                <div className="mb-4">
-                  <Quote size={32} className="text-primary/20" />
-                </div>
-
-                {/* Review */}
-                <p className="text-foreground mb-6 leading-relaxed">
-                  "{testimonial.review}"
-                </p>
-
                 {/* Rating */}
-                <div className="flex gap-1 mb-4">
+                <div className="flex gap-0.5 mb-3">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Star
                       key={i}
-                      size={16}
+                      size={14}
                       className={i < testimonial.rating ? "fill-primary text-primary" : "text-muted"}
                     />
                   ))}
                 </div>
 
+                {/* Review */}
+                <p className="text-sm text-foreground mb-4 leading-relaxed">
+                  "{testimonial.review}"
+                </p>
+
                 {/* Client Info */}
-                <div className="flex items-center justify-between border-t border-border pt-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-lg">
-                      {testimonial.flag}
-                    </div>
+                <div className="flex items-center justify-between pt-4 border-t border-border">
+                  <div className="flex items-center gap-2">
+                    <span className="text-lg">{testimonial.flag}</span>
                     <div>
-                      <div className="font-medium text-sm flex items-center gap-2">
+                      <div className="text-sm font-medium flex items-center gap-2">
                         {testimonial.name}
                         {testimonial.repeat && (
-                          <span className="text-xs bg-secondary text-secondary-foreground px-2 py-0.5 rounded-full">
-                            Repeat Client
+                          <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded">
+                            Repeat
                           </span>
                         )}
                       </div>
                       <div className="text-xs text-muted-foreground">{testimonial.country}</div>
                     </div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-xs text-muted-foreground">{testimonial.budget}</div>
-                    <div className="text-xs text-muted-foreground">{testimonial.duration}</div>
+                  <div className="text-right text-xs text-muted-foreground">
+                    <div>{testimonial.budget}</div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats */}
-      <section className="section-padding bg-muted/30">
-        <div className="container-custom">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {[
-              { value: "50+", label: "Happy Clients" },
-              { value: "4.9/5", label: "Average Rating" },
-              { value: "15+", label: "Countries" },
-              { value: "100+", label: "Projects" },
-            ].map((stat, index) => (
-              <div key={stat.label} className="animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
-                <div className="font-display text-4xl md:text-5xl font-bold gradient-text mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-muted-foreground">{stat.label}</div>
               </div>
             ))}
           </div>

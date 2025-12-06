@@ -33,35 +33,32 @@ export function Header() {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-200",
         isScrolled
-          ? "bg-card/90 backdrop-blur-lg shadow-card py-3"
-          : "bg-transparent py-5"
+          ? "bg-background border-b border-border py-3"
+          : "bg-transparent py-4"
       )}
     >
       <div className="container-custom flex items-center justify-between px-4 md:px-8">
         <Link
           to="/"
-          className="font-display text-2xl font-bold text-foreground hover:text-primary transition-colors"
+          className="text-2xl font-bold hover:text-primary transition-colors"
+          style={{ color: isScrolled ? 'hsl(var(--foreground))' : 'white' }}
         >
-          Faisal<span className="text-primary">.</span>
+          faisal<span className="text-primary">.</span>
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               to={link.href}
               className={cn(
-                "text-sm font-medium transition-colors relative py-1",
+                "text-sm font-medium transition-colors",
                 location.pathname === link.href
                   ? "text-primary"
-                  : "text-muted-foreground hover:text-foreground",
-                "after:absolute after:bottom-0 after:left-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300",
-                location.pathname === link.href
-                  ? "after:w-full"
-                  : "after:w-0 hover:after:w-full"
+                  : "text-muted-foreground hover:text-foreground"
               )}
             >
               {link.label}
@@ -70,8 +67,8 @@ export function Header() {
         </nav>
 
         <div className="hidden md:block">
-          <Button asChild size="sm">
-            <Link to="/contact">Let's Talk</Link>
+          <Button asChild>
+            <Link to="/contact">Get Started</Link>
           </Button>
         </div>
 
@@ -88,7 +85,7 @@ export function Header() {
       {/* Mobile Navigation */}
       <div
         className={cn(
-          "md:hidden absolute top-full left-0 right-0 bg-card/95 backdrop-blur-lg shadow-card overflow-hidden transition-all duration-300",
+          "md:hidden absolute top-full left-0 right-0 bg-background border-b border-border overflow-hidden transition-all duration-200",
           isMobileMenuOpen ? "max-h-[400px] py-4" : "max-h-0"
         )}
       >
@@ -108,7 +105,7 @@ export function Header() {
             </Link>
           ))}
           <Button asChild className="w-full max-w-xs mt-2">
-            <Link to="/contact">Let's Talk</Link>
+            <Link to="/contact">Get Started</Link>
           </Button>
         </nav>
       </div>

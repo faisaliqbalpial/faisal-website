@@ -1,80 +1,75 @@
 import { Link } from "react-router-dom";
 import { Search, Target, Facebook, Share2, Lightbulb, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const services = [
   {
     icon: Search,
     title: "SEO Optimization",
-    description: "Rank higher on Google, get more organic traffic, and increase visibility with technical audits and content strategy.",
-    color: "bg-secondary",
+    description: "Rank higher on Google and get more organic traffic with technical SEO and content strategy.",
   },
   {
     icon: Target,
     title: "Google Ads",
-    description: "Tap into high-intent audiences with search, display, and remarketing campaigns focused on performance & ROI.",
-    color: "bg-accent",
+    description: "High-intent campaigns focused on performance & ROI. Get more leads without wasting budget.",
   },
   {
     icon: Facebook,
     title: "Meta Advertising",
-    description: "Run laser-targeted campaigns across Facebook and Instagram with compelling visuals and smart audience segmentation.",
-    color: "bg-primary/10",
+    description: "Laser-targeted campaigns on Facebook and Instagram with smart audience segmentation.",
   },
   {
     icon: Share2,
     title: "Social Media",
-    description: "Full control of your social media – content creation, posting calendar, community engagement, and analytics.",
-    color: "bg-muted",
+    description: "Full control of your social media – content, posting, engagement, and analytics.",
   },
   {
     icon: Lightbulb,
     title: "Digital Strategy",
-    description: "Complete marketing strategy aligned with your business goals, unifying all channels for maximum impact.",
-    color: "bg-secondary",
+    description: "Complete marketing strategy aligned with your goals for maximum impact.",
   },
 ];
 
 export function ServicesPreview() {
   return (
-    <section className="section-padding bg-muted/30">
+    <section className="section-padding">
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in-up">
-            Digital Marketing{" "}
-            <span className="gradient-text">Services</span>
+        <div className="text-center max-w-2xl mx-auto mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 animate-fade-in-up">
+            Popular services
           </h2>
-          <p className="text-muted-foreground text-lg animate-fade-in-up animation-delay-100">
-            Smart strategies. Measurable results. Tailored services designed to help you attract, convert, and retain more customers.
+          <p className="text-muted-foreground animate-fade-in-up animation-delay-100">
+            Smart strategies. Measurable results. Services designed to grow your business.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-8">
           {services.map((service, index) => (
-            <div
+            <Link
+              to="/services"
               key={service.title}
-              className={`group bg-card rounded-3xl p-8 card-hover animate-fade-in-up`}
-              style={{ animationDelay: `${(index + 1) * 100}ms` }}
+              className="group p-6 bg-card border border-border rounded-lg hover:border-primary/30 hover:shadow-card-hover transition-all duration-200 animate-fade-in-up"
+              style={{ animationDelay: `${(index + 1) * 50}ms` }}
             >
-              <div className={`w-14 h-14 ${service.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                <service.icon size={24} className="text-primary" />
+              <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary/10 transition-colors">
+                <service.icon size={24} className="text-foreground group-hover:text-primary transition-colors" />
               </div>
-              <h3 className="font-display text-xl font-semibold mb-3">{service.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{service.description}</p>
-            </div>
+              <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">{service.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{service.description}</p>
+            </Link>
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center animate-fade-in-up animation-delay-500">
-          <Button asChild size="lg">
-            <Link to="/services" className="gap-2">
-              View All Services
-              <ArrowRight size={20} />
-            </Link>
-          </Button>
+        {/* View All Link */}
+        <div className="text-center animate-fade-in-up animation-delay-300">
+          <Link 
+            to="/services" 
+            className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
+          >
+            View all services
+            <ArrowRight size={16} />
+          </Link>
         </div>
       </div>
     </section>

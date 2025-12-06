@@ -1,74 +1,81 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, TrendingUp } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+
+const categories = [
+  "SEO Optimization",
+  "Google Ads",
+  "Facebook Ads",
+  "Social Media",
+  "Digital Strategy",
+];
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/30 rounded-full blur-3xl animate-float animation-delay-300" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-br from-primary/5 via-transparent to-accent/10 rounded-full" />
-      </div>
+    <section className="relative min-h-[90vh] flex items-center bg-foreground text-background overflow-hidden">
+      {/* Background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-br from-foreground via-foreground to-foreground/95" />
+      
+      {/* Subtle pattern overlay */}
+      <div className="absolute inset-0 opacity-5" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+      }} />
 
-      <div className="container-custom px-4 md:px-8 py-12">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 bg-accent/50 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-medium text-accent-foreground mb-8 animate-fade-in-up">
-            <Sparkles size={16} className="text-primary" />
-            <span>Digital Marketing Expert</span>
-          </div>
-
-          {/* Headline */}
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-in-up animation-delay-100">
-            Grow Your Business with{" "}
-            <span className="gradient-text">Smart Digital Marketing</span>
+      <div className="container-custom relative z-10 px-4 md:px-8 py-24 md:py-32">
+        <div className="max-w-3xl">
+          {/* Main headline */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-in-up">
+            Scale your business<br />
+            with <span className="text-primary">digital marketing</span>
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed animate-fade-in-up animation-delay-200">
-            Reach more customers, boost your online visibility, and increase your revenue with expert strategies in SEO, Google Ads, Facebook Ads & social media management.
+          <p className="text-lg md:text-xl text-background/70 max-w-2xl mb-8 leading-relaxed animate-fade-in-up animation-delay-100">
+            Expert strategies in SEO, Google Ads, Facebook Ads & social media management. Get more customers and grow your revenue.
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-fade-in-up animation-delay-300">
+          <div className="flex flex-col sm:flex-row items-start gap-4 mb-12 animate-fade-in-up animation-delay-200">
             <Button asChild variant="hero" size="lg">
               <Link to="/contact" className="gap-2">
-                Get a Free Strategy Call
+                Get a Free Consultation
                 <ArrowRight size={20} />
               </Link>
             </Button>
-            <Button asChild variant="hero-outline" size="lg">
+            <Button asChild variant="hero-outline" size="lg" className="border-background/30 text-background hover:bg-background hover:text-foreground">
               <Link to="/services">
-                Explore My Services
+                View Services
               </Link>
             </Button>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 animate-fade-in-up animation-delay-400">
-            {[
-              { value: "50+", label: "Happy Clients" },
-              { value: "5+", label: "Years Experience" },
-              { value: "100+", label: "Projects Completed" },
-              { value: "15+", label: "Countries Served" },
-            ].map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="font-display text-3xl md:text-4xl font-bold gradient-text mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
-              </div>
+          {/* Category pills */}
+          <div className="flex flex-wrap gap-3 animate-fade-in-up animation-delay-300">
+            {categories.map((category) => (
+              <Link
+                key={category}
+                to="/services"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-background/10 hover:bg-background/20 rounded-full text-sm font-medium text-background/80 hover:text-background transition-colors"
+              >
+                {category}
+                <ArrowRight size={14} />
+              </Link>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-muted-foreground/30 rounded-full flex justify-center pt-2">
-          <div className="w-1 h-2 bg-primary rounded-full" />
+      {/* Trusted by section */}
+      <div className="absolute bottom-0 left-0 right-0 bg-background/5 border-t border-background/10">
+        <div className="container-custom px-4 md:px-8 py-6">
+          <div className="flex items-center gap-8 flex-wrap">
+            <span className="text-sm text-background/50">Trusted by:</span>
+            <div className="flex items-center gap-8 text-background/40">
+              <span className="font-semibold">50+ Clients</span>
+              <span className="font-semibold">15+ Countries</span>
+              <span className="font-semibold">100+ Projects</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>

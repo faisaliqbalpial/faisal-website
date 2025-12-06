@@ -22,10 +22,10 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="space-y-4">
-            <Link to="/" className="font-display text-3xl font-bold">
-              Faisal<span className="text-primary">.</span>
+            <Link to="/" className="text-2xl font-bold">
+              faisal<span className="text-primary">.</span>
             </Link>
-            <p className="text-background/70 text-sm leading-relaxed">
+            <p className="text-background/60 text-sm leading-relaxed">
               From Clicks to Customers – I Make It Happen. Helping businesses grow digitally with smart strategies and measurable results.
             </p>
             <div className="flex gap-3">
@@ -35,7 +35,7 @@ export function Footer() {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 rounded-xl bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                   aria-label={social.label}
                 >
                   <social.icon size={18} />
@@ -46,13 +46,13 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-display text-lg font-semibold mb-6">Quick Links</h4>
+            <h4 className="text-base font-semibold mb-6">Quick Links</h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    className="text-background/70 hover:text-primary transition-colors text-sm"
+                    className="text-background/60 hover:text-primary transition-colors text-sm"
                   >
                     {link.label}
                   </Link>
@@ -63,8 +63,8 @@ export function Footer() {
 
           {/* Services */}
           <div>
-            <h4 className="font-display text-lg font-semibold mb-6">Services</h4>
-            <ul className="space-y-3 text-sm text-background/70">
+            <h4 className="text-base font-semibold mb-6">Services</h4>
+            <ul className="space-y-3 text-sm text-background/60">
               <li>SEO Optimization</li>
               <li>Google Ads Management</li>
               <li>Facebook & Instagram Ads</li>
@@ -75,21 +75,21 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-display text-lg font-semibold mb-6">Contact</h4>
+            <h4 className="text-base font-semibold mb-6">Contact</h4>
             <ul className="space-y-4 text-sm">
-              <li className="flex items-start gap-3 text-background/70">
+              <li className="flex items-start gap-3 text-background/60">
                 <Mail size={18} className="mt-0.5 shrink-0" />
                 <a href="mailto:hello@faisaliqbal.com" className="hover:text-primary transition-colors">
                   hello@faisaliqbal.com
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-background/70">
+              <li className="flex items-start gap-3 text-background/60">
                 <Phone size={18} className="mt-0.5 shrink-0" />
                 <a href="tel:+8801951336251" className="hover:text-primary transition-colors">
                   +880 1951 336251
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-background/70">
+              <li className="flex items-start gap-3 text-background/60">
                 <MapPin size={18} className="mt-0.5 shrink-0" />
                 <span>Rajshahi, Bangladesh<br />Serving clients worldwide 🌍</span>
               </li>
@@ -97,7 +97,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-background/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background/50">
+        <div className="border-t border-background/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background/40">
           <p>© 2025 Faisal Iqbal – All rights reserved</p>
           <div className="flex gap-6">
             <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>

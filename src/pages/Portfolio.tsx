@@ -10,7 +10,6 @@ const projects = [
     icon: TrendingUp,
     description: "Increased organic traffic by 300% in 6 months through technical SEO and content optimization.",
     results: ["+300% Organic Traffic", "+150% Revenue", "Page 1 Rankings"],
-    color: "from-secondary to-secondary/50",
   },
   {
     title: "SaaS Lead Generation",
@@ -18,7 +17,6 @@ const projects = [
     icon: Target,
     description: "Generated 500+ qualified leads per month with an optimized Google Ads campaign.",
     results: ["500+ Leads/Month", "-40% Cost per Lead", "+200% Conversions"],
-    color: "from-accent to-accent/50",
   },
   {
     title: "Restaurant Chain Social Growth",
@@ -26,7 +24,6 @@ const projects = [
     icon: Share2,
     description: "Grew Instagram following from 2K to 50K+ with engaging content and community management.",
     results: ["50K+ Followers", "+400% Engagement", "Viral Content"],
-    color: "from-primary/20 to-primary/5",
   },
   {
     title: "Fitness Brand Awareness",
@@ -34,7 +31,6 @@ const projects = [
     icon: Users,
     description: "Launched successful Facebook & Instagram campaigns reaching 2M+ potential customers.",
     results: ["2M+ Reach", "+500% Brand Awareness", "8x ROAS"],
-    color: "from-muted to-muted/50",
   },
   {
     title: "Local Business SEO",
@@ -42,7 +38,6 @@ const projects = [
     icon: TrendingUp,
     description: "Helped a local business rank #1 for key local search terms in their city.",
     results: ["#1 Local Rankings", "+200% Calls", "+150% Foot Traffic"],
-    color: "from-secondary to-accent/30",
   },
   {
     title: "B2B LinkedIn Campaign",
@@ -50,7 +45,6 @@ const projects = [
     icon: Share2,
     description: "Developed LinkedIn strategy that generated high-quality B2B leads for consulting firm.",
     results: ["100+ B2B Leads", "+300% Profile Views", "Industry Authority"],
-    color: "from-accent to-secondary/50",
   },
 ];
 
@@ -58,52 +52,53 @@ export default function Portfolio() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 px-4 md:px-8">
-        <div className="container-custom text-center">
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
-            My{" "}
-            <span className="gradient-text">Portfolio</span>
+      <section className="pt-24 pb-12 md:pt-32 md:pb-16 px-4 md:px-8 border-b border-border">
+        <div className="container-custom">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up">
+            Portfolio
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animation-delay-100">
-            Real results from real projects. See how I've helped businesses grow their digital presence.
+          <p className="text-lg text-muted-foreground max-w-2xl animate-fade-in-up animation-delay-100">
+            Real results from real projects. See how I've helped businesses grow.
           </p>
         </div>
       </section>
 
       {/* Projects Grid */}
-      <section className="section-padding pt-0">
+      <section className="section-padding">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {projects.map((project, index) => (
               <div
                 key={project.title}
-                className="group bg-card rounded-3xl overflow-hidden card-hover animate-fade-in-up"
-                style={{ animationDelay: `${(index % 6) * 100}ms` }}
+                className="group p-6 bg-card border border-border rounded-lg hover:border-primary/30 transition-all duration-200 animate-fade-in-up"
+                style={{ animationDelay: `${(index % 6) * 50}ms` }}
               >
-                {/* Header */}
-                <div className={`bg-gradient-to-br ${project.color} p-8`}>
-                  <div className="w-14 h-14 bg-card rounded-2xl flex items-center justify-center shadow-card group-hover:scale-110 transition-transform duration-300">
-                    <project.icon size={24} className="text-primary" />
+                {/* Icon & Category */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                    <project.icon size={20} className="text-foreground group-hover:text-primary transition-colors" />
                   </div>
+                  <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">
+                    {project.category}
+                  </span>
                 </div>
 
                 {/* Content */}
-                <div className="p-6 md:p-8">
-                  <div className="text-xs font-medium text-primary mb-2">{project.category}</div>
-                  <h3 className="font-display text-xl font-semibold mb-3">{project.title}</h3>
-                  <p className="text-sm text-muted-foreground mb-6">{project.description}</p>
+                <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">
+                  {project.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
 
-                  {/* Results */}
-                  <div className="flex flex-wrap gap-2">
-                    {project.results.map((result) => (
-                      <span
-                        key={result}
-                        className="text-xs bg-muted px-3 py-1.5 rounded-full font-medium"
-                      >
-                        {result}
-                      </span>
-                    ))}
-                  </div>
+                {/* Results */}
+                <div className="flex flex-wrap gap-2">
+                  {project.results.map((result) => (
+                    <span
+                      key={result}
+                      className="text-xs bg-secondary px-2 py-1 rounded font-medium"
+                    >
+                      {result}
+                    </span>
+                  ))}
                 </div>
               </div>
             ))}
@@ -112,12 +107,12 @@ export default function Portfolio() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-muted/30">
+      <section className="section-padding bg-secondary">
         <div className="container-custom text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-            Ready to Get Similar Results?
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+            Want similar results?
           </h2>
-          <p className="text-muted-foreground text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-muted-foreground mb-6 max-w-xl mx-auto">
             Let's discuss how I can help grow your business with data-driven digital marketing.
           </p>
           <Button asChild size="lg">
