@@ -40,6 +40,15 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Bio */}
             <div className="animate-fade-in-up">
+              {/* Profile Image */}
+              <div className="relative w-full aspect-video md:aspect-[4/3] mb-8 overflow-hidden rounded-xl bg-secondary shadow-lg">
+                <img
+                  src="/faisal.jpg"
+                  alt="Faisal Iqbal"
+                  className="object-cover w-full h-full hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
               <h2 className="text-2xl md:text-3xl font-bold mb-6">
                 Meet Faisal Iqbal
               </h2>
