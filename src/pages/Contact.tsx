@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Send, Calendar, Facebook, Linkedin } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Facebook, Linkedin } from "lucide-react";
 
 const contactInfo = [
   { icon: Mail, label: "Email", value: "hello@faisaliqbal.com", href: "mailto:hello@faisaliqbal.com" },
@@ -25,7 +25,6 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     toast({
@@ -40,88 +39,77 @@ export default function Contact() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="pt-32 pb-16 md:pt-40 md:pb-24 px-4 md:px-8">
-        <div className="container-custom text-center">
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in-up">
-            Let's Talk About Your{" "}
-            <span className="gradient-text">Marketing Goals</span>
+      <section className="pt-24 pb-12 md:pt-32 md:pb-16 px-4 md:px-8 border-b border-border">
+        <div className="container-custom">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-fade-in-up">
+            Contact Me
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in-up animation-delay-100">
-            Ready to take your business to the next level? Whether you need SEO, paid ads, or help with social media, let's find the right solution together.
+          <p className="text-lg text-muted-foreground max-w-2xl animate-fade-in-up animation-delay-100">
+            Ready to grow your business? Let's find the right solution together.
           </p>
         </div>
       </section>
 
       {/* Contact Section */}
-      <section className="section-padding pt-0">
+      <section className="section-padding">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+          <div className="grid lg:grid-cols-5 gap-12">
             {/* Contact Info */}
-            <div className="animate-fade-in-up">
-              <h2 className="font-display text-2xl md:text-3xl font-bold mb-8">
-                Get in Touch
-              </h2>
+            <div className="lg:col-span-2 animate-fade-in-up">
+              <h2 className="text-xl font-bold mb-6">Get in touch</h2>
 
-              <div className="space-y-6 mb-10">
+              <div className="space-y-4 mb-8">
                 {contactInfo.map((item) => (
-                  <div key={item.label} className="flex items-start gap-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-                      <item.icon size={20} className="text-primary" />
+                  <div key={item.label} className="flex items-center gap-3">
+                    <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center shrink-0">
+                      <item.icon size={18} className="text-primary" />
                     </div>
                     <div>
-                      <div className="text-sm text-muted-foreground mb-1">{item.label}</div>
+                      <div className="text-xs text-muted-foreground">{item.label}</div>
                       {item.href ? (
-                        <a href={item.href} className="font-medium hover:text-primary transition-colors">
+                        <a href={item.href} className="text-sm font-medium hover:text-primary transition-colors">
                           {item.value}
                         </a>
                       ) : (
-                        <span className="font-medium">{item.value}</span>
+                        <span className="text-sm font-medium">{item.value}</span>
                       )}
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="mb-10">
-                <div className="text-sm text-muted-foreground mb-4">Serving clients worldwide 🌍</div>
-                <div className="flex gap-3">
+              <div className="mb-8">
+                <div className="text-sm text-muted-foreground mb-3">Serving clients worldwide 🌍</div>
+                <div className="flex gap-2">
                   {socialLinks.map((social) => (
                     <a
                       key={social.label}
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-12 h-12 bg-muted rounded-xl flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                      className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-all duration-200"
                       aria-label={social.label}
                     >
-                      <social.icon size={20} />
+                      <social.icon size={18} />
                     </a>
                   ))}
                 </div>
               </div>
 
-              <div className="bg-accent/50 rounded-2xl p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <Calendar size={20} className="text-primary" />
-                  <span className="font-semibold">Book a Free Session</span>
-                </div>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Schedule a 30-minute call to discuss your marketing needs.
+              <div className="p-4 bg-primary/5 border border-primary/20 rounded-lg">
+                <p className="text-sm">
+                  <span className="font-medium">Response time:</span>{" "}
+                  <span className="text-muted-foreground">Usually within 24 hours</span>
                 </p>
-                <Button variant="outline" className="w-full">
-                  Schedule a Call
-                </Button>
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="animate-fade-in-up animation-delay-200">
-              <div className="bg-card rounded-3xl p-8 md:p-10 shadow-card">
-                <h2 className="font-display text-2xl font-bold mb-6">
-                  Send a Message
-                </h2>
+            <div className="lg:col-span-3 animate-fade-in-up animation-delay-200">
+              <div className="p-6 md:p-8 bg-card border border-border rounded-lg">
+                <h2 className="text-xl font-bold mb-6">Send a message</h2>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <div>
                       <label htmlFor="name" className="text-sm font-medium mb-2 block">
@@ -132,7 +120,7 @@ export default function Contact() {
                         name="name"
                         placeholder="Your name"
                         required
-                        className="rounded-xl h-12"
+                        className="h-11"
                       />
                     </div>
                     <div>
@@ -145,19 +133,19 @@ export default function Contact() {
                         type="email"
                         placeholder="your@email.com"
                         required
-                        className="rounded-xl h-12"
+                        className="h-11"
                       />
                     </div>
                   </div>
 
                   <div>
                     <label htmlFor="service" className="text-sm font-medium mb-2 block">
-                      What service are you interested in?
+                      Service interested in
                     </label>
                     <select
                       id="service"
                       name="service"
-                      className="w-full h-12 rounded-xl border border-input bg-background px-4 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
+                      className="w-full h-11 rounded-md border border-input bg-background px-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring"
                       required
                     >
                       <option value="">Select a service</option>
@@ -179,7 +167,7 @@ export default function Contact() {
                       name="message"
                       placeholder="Tell me about your project..."
                       required
-                      className="rounded-xl min-h-[150px] resize-none"
+                      className="min-h-[120px] resize-none"
                     />
                   </div>
 
