@@ -5,7 +5,7 @@ const testimonials = [
   {
     name: "gazam_khan",
     country: "Bangladesh",
-    flag: "🇧🇩",
+    code: "bd",
     rating: 5,
     review: "Excellent work! The seller professionally organized my YouTube channel, updated the branding, handled SEO, and delivered everything perfectly. Highly recommended!",
     budget: "Up to $50",
@@ -14,7 +14,7 @@ const testimonials = [
   {
     name: "scottcervine",
     country: "United States",
-    flag: "🇺🇸",
+    code: "us",
     rating: 5,
     review: "Excellent work! Very effective. I'll be back!",
     budget: "$50–$100",
@@ -23,7 +23,7 @@ const testimonials = [
   {
     name: "dolce86",
     country: "United States",
-    flag: "🇺🇸",
+    code: "us",
     rating: 5,
     review: "Absolute pleasure to work with! Transparent, dedicated, easy to communicate with. You're not 5 stars — you're 10/10. Thank you for helping bring my vision to life.",
     budget: "$100–$200",
@@ -32,7 +32,7 @@ const testimonials = [
   {
     name: "mattchase88",
     country: "United States",
-    flag: "🇺🇸",
+    code: "us",
     rating: 5,
     review: "Great work delivered daily!",
     budget: "$100–$200",
@@ -42,7 +42,7 @@ const testimonials = [
   {
     name: "gcpizzainc",
     country: "United States",
-    flag: "🇺🇸",
+    code: "us",
     rating: 5,
     review: "It has been amazing working with Faisal for 5 months! Excellent artwork, very responsive, and incredibly adaptive to our changing needs.",
     budget: "$50–$100",
@@ -52,7 +52,7 @@ const testimonials = [
   {
     name: "lennardsteeman",
     country: "Netherlands",
-    flag: "🇳🇱",
+    code: "nl",
     rating: 5,
     review: "Great job, saved me a lot of time.",
     budget: "$50–$100",
@@ -61,7 +61,7 @@ const testimonials = [
   {
     name: "saltaire",
     country: "Austria",
-    flag: "🇦🇹",
+    code: "at",
     rating: 5,
     review: "Excellent communication, precise work. Highly recommended. Professional work! Very good communication. Problem solver.",
     budget: "$100–$200",
@@ -71,7 +71,7 @@ const testimonials = [
   {
     name: "michelleyreese",
     country: "United States",
-    flag: "🇺🇸",
+    code: "us",
     rating: 5,
     review: "Very professional and talented creator — extremely pleased with the results.",
     budget: "$50–$100",
@@ -81,7 +81,7 @@ const testimonials = [
   {
     name: "atuljaiswal1246",
     country: "India",
-    flag: "🇮🇳",
+    code: "in",
     rating: 5,
     review: "I gave him a custom order and asked for 24-hour delivery. He took on the challenge and completed it like a pro!",
     budget: "Up to $50",
@@ -90,7 +90,7 @@ const testimonials = [
   {
     name: "asimaliloski",
     country: "France",
-    flag: "🇫🇷",
+    code: "fr",
     rating: 5,
     review: "Faisal does exactly what you ask. Clear instructions lead to great results. Thanks!",
     budget: "$50–$100",
@@ -99,7 +99,7 @@ const testimonials = [
   {
     name: "aim2plezu704",
     country: "United States",
-    flag: "🇺🇸",
+    code: "us",
     rating: 5,
     review: "Fast and great communication — thanks!",
     budget: "Up to $50",
@@ -108,7 +108,7 @@ const testimonials = [
   {
     name: "eegordon",
     country: "United States",
-    flag: "🇺🇸",
+    code: "us",
     rating: 5,
     review: "We'll definitely do more work — Twitter and Instagram next!",
     budget: "$100–$200",
@@ -184,7 +184,11 @@ export default function Testimonials() {
                 {/* Client Info */}
                 <div className="flex items-center justify-between pt-4 border-t border-border">
                   <div className="flex items-center gap-2">
-                    <span className="text-lg">{testimonial.flag}</span>
+                    <img
+                      src={`https://flagcdn.com/${testimonial.code}.svg`}
+                      alt={testimonial.country}
+                      className="w-6 h-auto rounded-sm object-cover"
+                    />
                     <div>
                       <div className="text-sm font-medium flex items-center gap-2">
                         {testimonial.name}
