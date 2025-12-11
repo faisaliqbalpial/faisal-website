@@ -99,7 +99,7 @@ export function HeroSection() {
           <div className="flex items-center gap-8 flex-wrap">
             <span className="text-sm text-muted-foreground">Trusted by:</span>
             <div className="flex items-center gap-8 text-foreground">
-              <span className="font-semibold">50+ Clients</span>
+              <span className="font-semibold">70+ Clients</span>
               <span className="font-semibold">15+ Countries</span>
               <span className="font-semibold">100+ Projects</span>
             </div>
