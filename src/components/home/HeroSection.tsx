@@ -70,21 +70,26 @@ export function HeroSection() {
 
           {/* Hero Image */}
           <div className="relative animate-fade-in-up animation-delay-500 mt-10 lg:mt-0">
-            <div className="relative w-64 h-80 sm:w-80 sm:h-96 md:w-[400px] md:h-[500px] mx-auto">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary to-secondary rounded-2xl rotate-6 opacity-20 blur-2xl"></div>
-              <img
-                src="/faisal.jpg"
-                alt="Faisal Iqbal"
-                className="relative w-full h-full object-cover rounded-2xl shadow-2xl border border-white/20"
-              />
+            <div className="relative w-[280px] h-[350px] sm:w-[340px] sm:h-[420px] md:w-[400px] md:h-[500px] mx-auto transition-all duration-500 hover:scale-[1.02]">
+              {/* Background Blob */}
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary via-primary/50 to-secondary rounded-2xl rotate-6 opacity-30 blur-2xl animate-pulse"></div>
+
+              {/* Image Gradient Border Wrapper */}
+              <div className="relative w-full h-full rounded-2xl p-1 bg-gradient-to-br from-primary/30 to-white/10 shadow-2xl">
+                <img
+                  src="/faisal.jpg"
+                  alt="Faisal Iqbal"
+                  className="w-full h-full object-cover rounded-xl shadow-inner bg-muted"
+                />
+              </div>
 
               {/* Floating Badge */}
-              <div className="absolute -bottom-6 -left-6 bg-card p-4 rounded-xl shadow-xl border border-border flex items-center gap-3 animate-bounce-slow z-20">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold">
+              <div className="absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 bg-card/90 backdrop-blur-md p-3 sm:p-4 rounded-xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-white/20 flex items-center gap-3 animate-fade-in-up z-20">
+                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center text-primary font-bold shadow-sm">
                   5+
                 </div>
                 <div>
-                  <div className="text-sm font-bold">Years Experience</div>
+                  <div className="text-sm font-bold text-foreground">Years Experience</div>
                   <div className="text-xs text-muted-foreground">Driving Growth</div>
                 </div>
               </div>
