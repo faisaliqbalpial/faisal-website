@@ -12,7 +12,7 @@ const categories = [
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[85vh] flex items-center bg-background overflow-hidden pt-20">
+    <section className="relative min-h-[85vh] flex flex-col justify-center bg-background overflow-hidden pt-20">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-50">
         <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
