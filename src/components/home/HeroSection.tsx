@@ -19,7 +19,7 @@ export function HeroSection() {
         <div className="absolute bottom-40 right-40 w-96 h-96 bg-secondary rounded-full blur-3xl" />
       </div>
 
-      <div className="container-custom relative z-10 px-4 md:px-8 py-16 md:py-24">
+      <div className="container-custom relative z-10 px-4 md:px-8 py-16 md:py-24 pb-0 md:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="max-w-3xl">
             {/* Badge */}
@@ -99,7 +99,7 @@ export function HeroSection() {
       </div>
 
       {/* Stats section */}
-      <div className="absolute bottom-0 left-0 right-0 border-t border-border bg-card/50 backdrop-blur-sm">
+      <div className="relative mt-12 md:mt-0 md:absolute bottom-0 left-0 right-0 border-t border-border bg-card/50 backdrop-blur-sm">
         <div className="container-custom px-4 md:px-8 py-6">
           <div className="flex items-center gap-8 flex-wrap">
             <span className="text-sm text-muted-foreground">Trusted by:</span>

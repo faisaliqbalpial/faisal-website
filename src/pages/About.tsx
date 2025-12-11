@@ -41,7 +41,7 @@ export default function About() {
             {/* Bio */}
             <div className="animate-fade-in-up">
               {/* Profile Image */}
-              <div className="relative w-full aspect-video md:aspect-[4/3] mb-8 overflow-hidden rounded-xl bg-secondary shadow-2xl border border-white/20 group">
+              <div className="relative w-full aspect-square sm:aspect-video md:aspect-[4/3] mb-8 overflow-hidden rounded-xl bg-secondary shadow-2xl border border-white/20 group">
                 <img
                   src="/faisal.jpg"
                   alt="Faisal Iqbal"
