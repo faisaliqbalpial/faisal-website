@@ -3,16 +3,16 @@ import { Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "gazam_khan",
-    country: "Bangladesh",
-    code: "bd",
+    name: "Gazam Khan",
+    country: "United Arab Emirates",
+    code: "ae",
     rating: 5,
     review: "Excellent work! The seller professionally organized my YouTube channel, updated the branding, handled SEO, and delivered everything perfectly. Highly recommended!",
     budget: "$200",
     duration: "1 day",
   },
   {
-    name: "scottcervine",
+    name: "Scott Cervine",
     country: "United States",
     code: "us",
     rating: 5,
@@ -21,7 +21,7 @@ const testimonials = [
     duration: "4 weeks",
   },
   {
-    name: "dolce86",
+    name: "Daniela",
     country: "United States",
     code: "us",
     rating: 5,
@@ -30,7 +30,7 @@ const testimonials = [
     duration: "3 weeks",
   },
   {
-    name: "mattchase88",
+    name: "Matt Chase",
     country: "United States",
     code: "us",
     rating: 5,
@@ -40,7 +40,7 @@ const testimonials = [
     repeat: true,
   },
   {
-    name: "gcpizzainc",
+    name: "Giancarlo",
     country: "United States",
     code: "us",
     rating: 5,
@@ -50,7 +50,7 @@ const testimonials = [
     repeat: true,
   },
   {
-    name: "lennardsteeman",
+    name: "Lennard Steeman",
     country: "Netherlands",
     code: "nl",
     rating: 5,
@@ -59,7 +59,7 @@ const testimonials = [
     duration: "2 weeks",
   },
   {
-    name: "saltaire",
+    name: "Salvatore",
     country: "Austria",
     code: "at",
     rating: 5,
@@ -69,7 +69,7 @@ const testimonials = [
     repeat: true,
   },
   {
-    name: "michelleyreese",
+    name: "Michelle Reese",
     country: "United States",
     code: "us",
     rating: 5,
@@ -79,7 +79,7 @@ const testimonials = [
     repeat: true,
   },
   {
-    name: "atuljaiswal1246",
+    name: "Atul Jaiswal",
     country: "India",
     code: "in",
     rating: 5,
@@ -88,7 +88,7 @@ const testimonials = [
     duration: "2 days",
   },
   {
-    name: "asimaliloski",
+    name: "Asim Aliloski",
     country: "France",
     code: "fr",
     rating: 5,
@@ -97,7 +97,7 @@ const testimonials = [
     duration: "1 week",
   },
   {
-    name: "aim2plezu704",
+    name: "Amy Pleasance",
     country: "United States",
     code: "us",
     rating: 5,
@@ -106,7 +106,7 @@ const testimonials = [
     duration: "3 days",
   },
   {
-    name: "eegordon",
+    name: "Emily Gordon",
     country: "United States",
     code: "us",
     rating: 5,
