@@ -38,6 +38,7 @@ export default function Contact() {
         body: JSON.stringify({
           ...data,
           _subject: `New inquiry for ${data.service === 'other' ? 'General Services' : data.service}`,
+          _captcha: "false",
         }),
       });
 
