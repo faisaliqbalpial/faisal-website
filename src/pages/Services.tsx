@@ -9,30 +9,35 @@ const services = [
     title: "Search Engine Optimization (SEO)",
     description: "SEO is the foundation of your online success. I help you rank higher on Google, get more organic traffic, and increase visibility with technical audits, on-page optimization, content strategy, and link-building campaigns.",
     features: ["Technical SEO Audits", "On-Page Optimization", "Content Strategy", "Link Building", "Local SEO", "Performance Tracking"],
+    slug: "seo",
   },
   {
     icon: Target,
     title: "Google Ads Management",
     description: "Tap into high-intent audiences with Google Ads. I create, launch, and optimize search, Display, YouTube, and remarketing campaigns focused on performance & ROI. You'll get more leads without wasting your budget.",
     features: ["Search Campaigns", "Display Advertising", "YouTube Ads", "Remarketing", "Conversion Tracking", "ROI Optimization"],
+    slug: "google-ads",
   },
   {
     icon: Facebook,
     title: "Facebook & Instagram Ads (Meta Advertising)",
     description: "Run laser-targeted campaigns across social platforms with Meta Ads. I build powerful ads with compelling visuals, persuasive copy, and smart audience segmentation so you can grow faster on Facebook and Instagram.",
     features: ["Audience Targeting", "Ad Creative Design", "A/B Testing", "Retargeting Campaigns", "Lead Generation", "Sales Funnels"],
+    slug: "facebook-ads",
   },
   {
     icon: Share2,
     title: "Social Media Management",
     description: "No more stress about what to post or how to manage your accounts. I take full control of your social media – content creation, posting calendar, community engagement, and analytics reporting – to help you grow your brand and audience.",
     features: ["Content Creation", "Posting Calendar", "Community Management", "Analytics & Reporting", "Brand Building", "Engagement Growth"],
+    slug: "social-media-management",
   },
   {
     icon: Lightbulb,
     title: "Full Digital Strategy",
     description: "Let's build a complete digital marketing strategy aligned with your business goals. From awareness to conversion, I help you unify all your channels for maximum impact and results.",
     features: ["Market Research", "Competitor Analysis", "Channel Strategy", "Campaign Planning", "Performance Metrics", "Growth Roadmap"],
+    slug: "digital-strategy",
   },
 ];
 
@@ -70,7 +75,14 @@ export default function Services() {
 
               {/* Description */}
               <div>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                <p className="text-muted-foreground leading-relaxed mb-4">{service.description}</p>
+
+                <Button variant="outline" size="sm" asChild className="mb-6 group">
+                  <Link to={`/services/${service.slug}`}>
+                    Read Case Study
+                    <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </Button>
               </div>
 
               {/* Features */}
