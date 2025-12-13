@@ -1,13 +1,5 @@
 import { Link } from "react-router-dom";
 import { Search, Target, Facebook, Share2, Lightbulb, ArrowRight, Mail } from "lucide-react";
-import {
-  SeoIllustration,
-  GoogleAdsIllustration,
-  MetaAdsIllustration,
-  SocialMediaIllustration,
-  DigitalStrategyIllustration,
-  EmailMarketingIllustration
-} from "./ServiceIllustrations";
 
 const services = [
   {
@@ -17,7 +9,7 @@ const services = [
     color: "text-blue-600 dark:text-blue-400",
     bg: "bg-blue-50 dark:bg-blue-950/30",
     border: "group-hover:border-blue-500/30",
-    Illustration: SeoIllustration,
+    image: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=800&auto=format&fit=crop",
   },
   {
     icon: Target,
@@ -26,7 +18,7 @@ const services = [
     color: "text-orange-600 dark:text-orange-400",
     bg: "bg-orange-50 dark:bg-orange-950/30",
     border: "group-hover:border-orange-500/30",
-    Illustration: GoogleAdsIllustration,
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
   },
   {
     icon: Facebook,
@@ -35,7 +27,7 @@ const services = [
     color: "text-indigo-600 dark:text-indigo-400",
     bg: "bg-indigo-50 dark:bg-indigo-950/30",
     border: "group-hover:border-indigo-500/30",
-    Illustration: MetaAdsIllustration,
+    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
   },
   {
     icon: Share2,
@@ -44,7 +36,7 @@ const services = [
     color: "text-pink-600 dark:text-pink-400",
     bg: "bg-pink-50 dark:bg-pink-950/30",
     border: "group-hover:border-pink-500/30",
-    Illustration: SocialMediaIllustration,
+    image: "https://images.unsplash.com/photo-1611926653458-09294b3019dc?q=80&w=800&auto=format&fit=crop",
   },
   {
     icon: Lightbulb,
@@ -53,7 +45,7 @@ const services = [
     color: "text-emerald-600 dark:text-emerald-400",
     bg: "bg-emerald-50 dark:bg-emerald-950/30",
     border: "group-hover:border-emerald-500/30",
-    Illustration: DigitalStrategyIllustration,
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop",
   },
   {
     icon: Mail,
@@ -62,7 +54,7 @@ const services = [
     color: "text-amber-600 dark:text-amber-400",
     bg: "bg-amber-50 dark:bg-amber-950/30",
     border: "group-hover:border-amber-500/30",
-    Illustration: EmailMarketingIllustration,
+    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop",
   },
 ];
 
@@ -89,22 +81,26 @@ export function ServicesPreview() {
               className={`group relative p-8 h-full rounded-2xl border border-border bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${service.border} overflow-hidden`}
               style={{ animationDelay: `${(index + 1) * 50}ms` }}
             >
-              {/* Illustration Background */}
-              <div className="absolute right-0 bottom-0 w-[140px] h-[100px] opacity-10 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none">
-                <service.Illustration className="w-full h-full object-contain object-right-bottom" />
+              {/* Image Background */}
+              <div className="absolute inset-0 z-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
               </div>
 
-              {/* Hover Light Splash */}
-              <div className={`absolute -right-10 -bottom-10 w-40 h-40 bg-gradient-to-br from-transparent to-${service.color.split('-')[1]}-500/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-500`} />
+              {/* Hover Light Splash (kept subtle) */}
+              <div className={`absolute -right-10 -bottom-10 w-40 h-40 bg-gradient-to-br from-transparent to-${service.color.split('-')[1]}-500/20 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-all duration-500 z-0`} />
 
               <div className="relative z-10 flex flex-col h-full">
                 {/* Icon with colored background */}
-                <div className={`w-14 h-14 ${service.bg} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-14 h-14 ${service.bg} rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-sm`}>
                   <service.icon size={28} className={service.color} />
                 </div>
 
                 <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow max-w-[90%]">
+                <p className="text-muted-foreground leading-relaxed mb-6 flex-grow ">
                   {service.description}
                 </p>
 
