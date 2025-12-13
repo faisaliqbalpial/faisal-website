@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Search, Target, Facebook, Share2, Lightbulb, ArrowRight, CheckCircle } from "lucide-react";
+import { Search, Target, Facebook, Share2, Lightbulb, ArrowRight, CheckCircle, Mail } from "lucide-react";
 
 const services = [
   {
@@ -38,6 +38,13 @@ const services = [
     description: "Let's build a complete digital marketing strategy aligned with your business goals. From awareness to conversion, I help you unify all your channels for maximum impact and results.",
     features: ["Market Research", "Competitor Analysis", "Channel Strategy", "Campaign Planning", "Performance Metrics", "Growth Roadmap"],
     slug: "digital-strategy",
+  },
+  {
+    icon: Mail,
+    title: "Email Marketing & Automation",
+    description: "Maximize your ROI with expert Mailchimp email marketing. I provide end-to-end services—from setting up accounts and designing responsive templates to crafting automated flows and analyzing performance for higher engagement.",
+    features: ["Mailchimp Setup & Integration", "Responsive Email Design", "Automation Flows", "Campaign Management", "Landing Pages & Forms", "Analytics & Reporting"],
+    slug: "email-marketing",
   },
 ];
 

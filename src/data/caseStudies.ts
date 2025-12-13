@@ -214,5 +214,44 @@ export const caseStudies: Record<string, CaseStudy> = {
             author: "David R.",
             role: "CEO"
         }
+    },
+    "email-marketing": {
+        id: "email-marketing",
+        serviceTitle: "Email Marketing & Automation",
+        title: "Driving 30% More Sales with Automated Email Flows",
+        intro: {
+            client: "E-commerce Startup",
+            problem: "Client had a growing email list but sent sporadic, unoptimized newsletters. They were missing out on revenue from abandoned carts and new subscriber welcomes.",
+            goal: "Set up a robust Mailchimp automation system to nurture leads and recover lost sales automatically.",
+        },
+        beforeResults: [
+            { metric: "Open Rate", value: "12%" },
+            { metric: "Click-Through Rate", value: "1.5%" },
+            { metric: "Revenue from Email", value: "< 5%" },
+        ],
+        afterResults: [
+            { metric: "Open Rate", value: "35%" },
+            { metric: "Click-Through Rate", value: "4.8%" },
+            { metric: "Revenue from Email", value: "22%" },
+        ],
+        strategy: [
+            {
+                title: "Automated Flows Setup",
+                description: "Created Welcome Series and Abandoned Cart flows to engage users at critical touchpoints."
+            },
+            {
+                title: "Segmentation & Personalization",
+                description: "Segmented the audience based on purchase behavior to send relevant, high-converting offers."
+            },
+            {
+                title: "Responsive Design Overhaul",
+                description: "Designed mobile-friendly, visually appealing templates that improved readability and click-throughs."
+            }
+        ],
+        clientFeedback: {
+            quote: "The automation runs itself and brings in sales while I sleep. Best investment we've made.",
+            author: "Sarah K.",
+            role: "Founder"
+        }
     }
 };
