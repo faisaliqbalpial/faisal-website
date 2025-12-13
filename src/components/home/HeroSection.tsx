@@ -8,6 +8,7 @@ const categories = [
   "Facebook Ads",
   "Social Media",
   "Digital Strategy",
+  "Email Marketing",
 ];
 
 export function HeroSection() {
