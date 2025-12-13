@@ -24,7 +24,7 @@ const services = [
     icon: Share2,
     title: "Social Media",
     description: "Full control of your social media – content, posting, engagement, and analytics.",
-    image: "https://images.unsplash.com/photo-1611926653458-09294b3019dc?q=80&w=800&auto=format&fit=crop",
+    image: "/faisaliqbal.png",
   },
   {
     icon: Lightbulb,
