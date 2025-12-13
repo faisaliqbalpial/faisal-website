@@ -19,14 +19,14 @@ const stats = [
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex flex-col justify-center bg-background overflow-hidden pt-20 pb-20">
+    <section className="relative min-h-0 flex flex-col justify-center bg-background overflow-hidden pt-20 pb-6">
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-50 pointer-events-none">
         <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-40 right-40 w-96 h-96 bg-secondary rounded-full blur-3xl" />
       </div>
 
-      <div className="container-custom relative z-10 px-4 md:px-8 py-12 md:py-24">
+      <div className="container-custom relative z-10 px-4 md:px-8 pt-12 md:pt-20 pb-0">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <div className="max-w-3xl order-2 lg:order-1">
             {/* Badge */}
@@ -118,7 +118,7 @@ export function HeroSection() {
         </div>
 
         {/* Bottom Stats Banner */}
-        <div className="mt-20 pt-8 border-t border-border/50">
+        <div className="mt-10 pt-8 border-t border-border/50">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-between">
             <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider hidden md:block">Trusted by <br />businesses in:</span>
             {stats.map((stat, idx) => (
