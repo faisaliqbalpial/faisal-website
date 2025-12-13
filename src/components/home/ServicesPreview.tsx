@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Search, Target, Facebook, Share2, Lightbulb, ArrowRight } from "lucide-react";
+import { Search, Target, Facebook, Share2, Lightbulb, ArrowRight, Mail } from "lucide-react";
 
 const services = [
   {
@@ -27,6 +27,11 @@ const services = [
     title: "Digital Strategy",
     description: "Complete marketing strategy aligned with your goals for maximum impact.",
   },
+  {
+    icon: Mail,
+    title: "Email Marketing",
+    description: "Expert Mailchimp newsletters, automation flows, and responsive design for higher ROI.",
+  },
 ];
 
 export function ServicesPreview() {
@@ -44,7 +49,7 @@ export function ServicesPreview() {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {services.map((service, index) => (
             <Link
               to="/services"
@@ -63,8 +68,8 @@ export function ServicesPreview() {
 
         {/* View All Link */}
         <div className="text-center animate-fade-in-up animation-delay-300">
-          <Link 
-            to="/services" 
+          <Link
+            to="/services"
             className="inline-flex items-center gap-2 text-primary font-medium hover:underline"
           >
             View all services
