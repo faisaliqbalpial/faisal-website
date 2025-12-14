@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Search, Target, Facebook, Share2, Lightbulb, Mail, Users, Globe, FolderCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import { CLIENT_COUNT } from "@/data/constants";
+
 const categories = [
   { label: "SEO Optimization", icon: Search, color: "text-blue-500", bg: "bg-blue-500/10", border: "hover:border-blue-500/50" },
   { label: "Google Ads", icon: Target, color: "text-orange-500", bg: "bg-orange-500/10", border: "hover:border-orange-500/50" },
@@ -12,7 +14,7 @@ const categories = [
 ];
 
 const stats = [
-  { label: "Clients", value: "70+", icon: Users },
+  { label: "Clients", value: CLIENT_COUNT, icon: Users },
   { label: "Countries", value: "15+", icon: Globe },
   { label: "Projects", value: "100+", icon: FolderCheck },
 ];
@@ -109,7 +111,7 @@ export function HeroSection() {
 
               <div className="absolute -right-6 bottom-20 w-36 bg-card/90 backdrop-blur-md rounded-xl p-4 shadow-xl border border-white/10 animate-fade-in-up animation-delay-400 hidden md:block">
                 <div className="flex flex-col items-center text-center">
-                  <span className="text-2xl font-bold text-green-500">100+</span>
+                  <span className="text-2xl font-bold text-green-500">{CLIENT_COUNT}</span>
                   <span className="text-xs text-muted-foreground font-medium">Happy Clients</span>
                 </div>
               </div>

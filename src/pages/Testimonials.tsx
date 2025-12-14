@@ -1,5 +1,6 @@
 import { Layout } from "@/components/layout/Layout";
 import { Star } from "lucide-react";
+import { CLIENT_COUNT } from "@/data/constants";
 
 const testimonials = [
   {
@@ -143,7 +144,7 @@ export default function Testimonials() {
                   <Star key={i} size={16} className="fill-primary text-primary" />
                 ))}
               </div>
-              <span className="text-muted-foreground text-sm">(70+ reviews)</span>
+              <span className="text-muted-foreground text-sm">({CLIENT_COUNT} reviews)</span>
             </div>
             <div className="text-sm text-muted-foreground">
               <span className="font-semibold text-foreground">15+</span> countries served
