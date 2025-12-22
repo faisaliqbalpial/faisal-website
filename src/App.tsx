@@ -11,6 +11,8 @@ import Testimonials from "./pages/Testimonials";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 import { WhatsAppButton } from "./components/WhatsAppButton";
 import ScrollToTop from "./components/ScrollToTop";
@@ -32,6 +34,8 @@ const App = () => (
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
