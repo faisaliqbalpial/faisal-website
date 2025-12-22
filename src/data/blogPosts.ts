@@ -1,23 +1,23 @@
 export interface BlogPost {
-    id: string;
-    slug: string;
-    title: string;
-    excerpt: string;
-    content: string;
-    category: "SEO" | "Google Ads" | "Email Marketing" | "Digital Strategy";
-    author: string;
-    date: string;
-    imageUrl: string;
-    readTime: string;
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  category: "SEO" | "Google Ads" | "Email Marketing" | "Digital Strategy";
+  author: string;
+  date: string;
+  imageUrl: string;
+  readTime: string;
 }
 
 export const blogPosts: BlogPost[] = [
-    {
-        id: "1",
-        slug: "future-of-seo-2025",
-        title: "The Future of SEO in 2025: What You Need to Know",
-        excerpt: "Discover the emerging trends in Search Engine Optimization, from AI-driven search results to voice search dominance.",
-        content: `
+  {
+    id: "1",
+    slug: "future-of-seo-2025",
+    title: "The Future of SEO in 2025: What You Need to Know",
+    excerpt: "Discover the emerging trends in Search Engine Optimization, from AI-driven search results to voice search dominance.",
+    content: `
       <h2>The Evolution of Search</h2>
       <p>As we move further into the decade, SEO is undergoing a seismic shift. The days of keyword stuffing and simple backlinking are long gone. Today, it's about User Experience (UX), Entity-Based SEO, and AI integration.</p>
       
@@ -33,18 +33,18 @@ export const blogPosts: BlogPost[] = [
       <h2>Conclusion</h2>
       <p>The future belongs to those who adapt. Focus on value, user intent, and technical excellence to stay ahead.</p>
     `,
-        category: "SEO",
-        author: "Faisal Iqbal",
-        date: "Dec 15, 2024",
-        imageUrl: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800",
-        readTime: "5 min read"
-    },
-    {
-        id: "2",
-        slug: "maximizing-google-ads-roi",
-        title: "Maximizing ROI with Google Ads Smart Bidding",
-        excerpt: "Learn how to leverage machine learning in Google Ads to lower your CPC and increase conversions effectively.",
-        content: `
+    category: "SEO",
+    author: "Faisal Iqbal",
+    date: "Dec 15, 2024",
+    imageUrl: "https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?auto=format&fit=crop&q=80&w=800",
+    readTime: "5 min read"
+  },
+  {
+    id: "2",
+    slug: "maximizing-google-ads-roi",
+    title: "Maximizing ROI with Google Ads Smart Bidding",
+    excerpt: "Learn how to leverage machine learning in Google Ads to lower your CPC and increase conversions effectively.",
+    content: `
       <h2>Why Smart Bidding?</h2>
       <p>Manual bidding gives you control, but Smart Bidding gives you scale. By using Google's AI, you can bid more accurately for every single auction.</p>
       
@@ -58,18 +58,18 @@ export const blogPosts: BlogPost[] = [
       <h2>Setting Up for Success</h2>
       <p>Ensure your conversion tracking is flawless before switching to automated bidding. The algorithm is only as good as the data you feed it.</p>
     `,
-        category: "Google Ads",
-        author: "Faisal Iqbal",
-        date: "Dec 10, 2024",
-        imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-        readTime: "4 min read"
-    },
-    {
-        id: "3",
-        slug: "email-marketing-automation-guide",
-        title: "The Ultimate Guide to Email Marketing Automation",
-        excerpt: "Stop sending manual blasts. Set up automated flows that nurture leads while you sleep.",
-        content: `
+    category: "Google Ads",
+    author: "Faisal Iqbal",
+    date: "Dec 10, 2024",
+    imageUrl: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+    readTime: "4 min read"
+  },
+  {
+    id: "3",
+    slug: "email-marketing-automation-guide",
+    title: "The Ultimate Guide to Email Marketing Automation",
+    excerpt: "Stop sending manual blasts. Set up automated flows that nurture leads while you sleep.",
+    content: `
       <h2>Automation is Efficiency</h2>
       <p>Email marketing remains one of the highest ROI channels. Automation allows you to send the right message at the right time.</p>
       
@@ -78,28 +78,59 @@ export const blogPosts: BlogPost[] = [
       <p>2. <strong>Abandoned Cart:</strong> Recover lost sales with gentle reminders.</p>
       <p>3. <strong>Post-Purchase:</strong> Ask for reviews and suggest related products.</p>
     `,
-        category: "Email Marketing",
-        author: "Faisal Iqbal",
-        date: "Dec 05, 2024",
-        imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
-        readTime: "6 min read"
-    },
-    {
-        id: "4",
-        slug: "holistic-digital-strategy",
-        title: "Building a Holistic Digital Strategy for 2025",
-        excerpt: "Don't rely on just one channel. Integrating SEO, PPC, and Social Media creates a compounding growth effect.",
-        content: `
+    category: "Email Marketing",
+    author: "Faisal Iqbal",
+    date: "Dec 05, 2024",
+    imageUrl: "https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800",
+    readTime: "6 min read"
+  },
+  {
+    id: "4",
+    slug: "holistic-digital-strategy",
+    title: "Building a Holistic Digital Strategy for 2025",
+    excerpt: "Don't rely on just one channel. Integrating SEO, PPC, and Social Media creates a compounding growth effect.",
+    content: `
       <h2>The Silo Problem</h2>
       <p>Many businesses treat SEO and PPC as separate entities. In reality, they should support each other. Data from PPC can inform SEO keywords, and high-ranking SEO pages can be used for retargeting.</p>
       
       <h2>The Framework</h2>
       <p>Start with the customer journey. Where do they find you? How do they evaluate you? Tie every channel to a specific stage in the funnel.</p>
     `,
-        category: "Digital Strategy",
-        author: "Faisal Iqbal",
-        date: "Nov 28, 2024",
-        imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-        readTime: "7 min read"
-    }
+    category: "Digital Strategy",
+    author: "Faisal Iqbal",
+    date: "Nov 28, 2024",
+    imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+    readTime: "7 min read"
+  },
+  {
+    id: "5",
+    slug: "email-segmentation-strategies",
+    title: "Why Email Segmentation is the Key to Higher Open Rates",
+    excerpt: "Stop sending the same message to everyone. Learn how segmentation can triple your engagement and drive more sales.",
+    content: `
+      <h2>The "Batch and Blast" Era is Over</h2>
+      <p>If you're still sending the exact same newsletter to your entire list, you"re leaving money on the table. In 2025, relevance is the only way to cut through the noise of a crowded inbox.</p>
+
+      <h2>What is Email Segmentation?</h2>
+      <p>Segmentation is the practice of dividing your email list into smaller groups based on specific criteria. This allows you to tailor your messaging to distinct audiences.</p>
+
+      <h3>Top 3 Segments to Start With</h3>
+      <ul>
+        <li><strong>Purchase Behavior:</strong> Treat first-time buyers differently than VIP loyalists. A VIP deserves early access; a new buyer needs education.</li>
+        <li><strong>Engagement Level:</strong> Don't keep emailing "ghosts" who haven't opened in 6 months. Create a re-engagement campaign for them, and remove them if they don't bite to protect your sender reputation.</li>
+        <li><strong>Demographics/Location:</strong> If you promote a winter coat sale, don't send it to your subscribers in Australia during their summer!</li>
+      </ul>
+
+      <h2>The ROI of Personalization</h2>
+      <p>Segmented campaigns have been shown to drive a 760% revenue increase. When people feel you understand them, they buy from you.</p>
+
+      <h2>Conclusion</h2>
+      <p>Start small. Even splitting your list into "Customers" vs. "Non-Customers" is a massive step forward. Test, measure, and refine.</p>
+    `,
+    category: "Email Marketing",
+    author: "Faisal Iqbal",
+    date: "Dec 20, 2024",
+    imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
+    readTime: "6 min read"
+  }
 ];
