@@ -66,28 +66,26 @@ export function SubscriptionPopup() {
         setIsSubmitting(true);
 
         try {
-            const response = await fetch("https://formsubmit.co/ajax/contact@faisaliqbal.com", {
+            const response = await fetch("/api/subscribe", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
-                    "Accept": "application/json"
                 },
                 body: JSON.stringify({
                     email: email,
-                    _subject: "New Newsletter Subscription",
-                    _captcha: "false",
-                    message: "New subscriber for the 10% coupon."
                 }),
             });
 
+            const data = await response.json();
+
             if (response.ok) {
-                toast.success("Subscribed successfully! The coupon code will be emailed to you shortly.");
+                toast.success(data.message || "Subscribed successfully! The coupon code is coupon10");
                 handleClose();
             } else {
-                throw new Error("Failed to subscribe");
+                throw new Error(data.error || "Failed to subscribe");
             }
-        } catch (error) {
-            toast.error("Something went wrong. Please try again.");
+        } catch (error: any) {
+            toast.error(error.message || "Something went wrong. Please try again.");
         } finally {
             setIsSubmitting(false);
         }
