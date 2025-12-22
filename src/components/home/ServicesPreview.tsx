@@ -6,37 +6,37 @@ const services = [
     icon: Search,
     title: "SEO Optimization",
     description: "Rank higher on Google and get more organic traffic with technical SEO and content strategy.",
-    image: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=800&auto=format&fit=crop",
+    gradient: "from-emerald-50 to-teal-100",
   },
   {
     icon: Target,
     title: "Google Ads",
     description: "High-intent campaigns focused on performance & ROI. Get more leads without wasting budget.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
+    gradient: "from-blue-50 to-sky-100",
   },
   {
     icon: Facebook,
     title: "Meta Advertising",
     description: "Laser-targeted campaigns on Facebook and Instagram with smart audience segmentation.",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop",
+    gradient: "from-violet-50 to-purple-100",
   },
   {
     icon: Share2,
     title: "Social Media",
     description: "Full control of your social media – content, posting, engagement, and analytics.",
-    image: "/faisaliqbal.png",
+    gradient: "from-indigo-50 to-blue-100",
   },
   {
     icon: Lightbulb,
     title: "Digital Strategy",
     description: "Complete marketing strategy aligned with your goals for maximum impact.",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=800&auto=format&fit=crop",
+    gradient: "from-slate-50 to-gray-100",
   },
   {
     icon: Mail,
     title: "Email Marketing",
     description: "Expert Mailchimp newsletters, automation flows, and responsive design for higher ROI.",
-    image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=800&auto=format&fit=crop",
+    gradient: "from-green-50 to-emerald-100",
   },
 ];
 
@@ -60,34 +60,23 @@ export function ServicesPreview() {
             <Link
               to="/services"
               key={service.title}
-              className="group relative h-[320px] rounded-2xl overflow-hidden border border-border/50 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+              className={`group relative h-[320px] rounded-2xl overflow-hidden border border-border/50 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br ${service.gradient}`}
               style={{ animationDelay: `${(index + 1) * 50}ms` }}
             >
-              {/* Full Background Image */}
-              <div className="absolute inset-0">
-                <img
-                  src={service.image}
-                  alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                {/* Dark Gradient Overlay for Readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30 group-hover:via-black/50 transition-colors duration-500" />
-              </div>
-
               {/* Content */}
-              <div className="relative z-10 flex flex-col h-full p-8 text-white">
-                {/* Icon Glassmorphism */}
-                <div className="w-12 h-12 bg-white/20 backdrop-blur-md border border-white/30 rounded-xl flex items-center justify-center mb-6 text-white group-hover:bg-primary group-hover:border-primary transition-all duration-300 shadow-lg">
-                  <service.icon size={24} />
+              <div className="relative z-10 flex flex-col h-full p-8">
+                {/* Icon */}
+                <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 text-primary shadow-sm group-hover:scale-110 transition-transform duration-300">
+                  <service.icon size={28} />
                 </div>
 
-                <h3 className="text-2xl font-bold mb-3 tracking-tight">{service.title}</h3>
-                <p className="text-white/80 leading-relaxed mb-6 line-clamp-3 group-hover:text-white/90 transition-colors">
+                <h3 className="text-2xl font-bold mb-3 tracking-tight text-foreground">{service.title}</h3>
+                <p className="text-muted-foreground leading-relaxed mb-6 line-clamp-3 group-hover:text-foreground/80 transition-colors">
                   {service.description}
                 </p>
 
-                <div className="mt-auto flex items-center text-sm font-semibold opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-primary-foreground">
-                  View Case Study <ArrowRight size={16} className="ml-2" />
+                <div className="mt-auto flex items-center text-sm font-semibold opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-primary">
+                  View Case Study <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
             </Link>
