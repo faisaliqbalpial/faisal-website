@@ -10,13 +10,15 @@ const services = [
     description: "SEO is the foundation of your online success. I help you rank higher on Google, get more organic traffic, and increase visibility with technical audits, on-page optimization, content strategy, and link-building campaigns.",
     features: ["Technical SEO Audits", "On-Page Optimization", "Content Strategy", "Link Building", "Local SEO", "Performance Tracking"],
     slug: "seo",
+    gradient: "from-emerald-50 to-teal-100",
   },
   {
     icon: Target,
     title: "Google Ads Management",
-    description: "Tap into high-intent audiences with Google Ads. I create, launch, and optimize search, Display, YouTube, and remarketing campaigns focused on performance & ROI. You'll get more leads without wasting your budget.",
+    description: "Tap into high-intent audiences with Google Ads. I create, launch, and optimize search, Display, YouTube, and remarketing campaigns focused on performance & ROI. You'll get more leads without wasting budget.",
     features: ["Search Campaigns", "Display Advertising", "YouTube Ads", "Remarketing", "Conversion Tracking", "ROI Optimization"],
     slug: "google-ads",
+    gradient: "from-blue-50 to-sky-100",
   },
   {
     icon: Facebook,
@@ -24,6 +26,7 @@ const services = [
     description: "Run laser-targeted campaigns across social platforms with Meta Ads. I build powerful ads with compelling visuals, persuasive copy, and smart audience segmentation so you can grow faster on Facebook and Instagram.",
     features: ["Audience Targeting", "Ad Creative Design", "A/B Testing", "Retargeting Campaigns", "Lead Generation", "Sales Funnels"],
     slug: "facebook-ads",
+    gradient: "from-violet-50 to-purple-100",
   },
   {
     icon: Share2,
@@ -31,6 +34,7 @@ const services = [
     description: "No more stress about what to post or how to manage your accounts. I take full control of your social media – content creation, posting calendar, community engagement, and analytics reporting – to help you grow your brand and audience.",
     features: ["Content Creation", "Posting Calendar", "Community Management", "Analytics & Reporting", "Brand Building", "Engagement Growth"],
     slug: "social-media-management",
+    gradient: "from-indigo-50 to-blue-100",
   },
   {
     icon: Lightbulb,
@@ -38,6 +42,7 @@ const services = [
     description: "Let's build a complete digital marketing strategy aligned with your business goals. From awareness to conversion, I help you unify all your channels for maximum impact and results.",
     features: ["Market Research", "Competitor Analysis", "Channel Strategy", "Campaign Planning", "Performance Metrics", "Growth Roadmap"],
     slug: "digital-strategy",
+    gradient: "from-slate-50 to-gray-100",
   },
   {
     icon: Mail,
@@ -45,6 +50,7 @@ const services = [
     description: "Maximize your ROI with expert Mailchimp email marketing. I provide end-to-end services—from setting up accounts and designing responsive templates to crafting automated flows and analyzing performance for higher engagement.",
     features: ["Mailchimp Setup & Integration", "Responsive Email Design", "Automation Flows", "Campaign Management", "Landing Pages & Forms", "Analytics & Reporting"],
     slug: "email-marketing",
+    gradient: "from-green-50 to-emerald-100",
   },
 ];
 
@@ -69,22 +75,22 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="grid lg:grid-cols-3 gap-8 items-start p-6 md:p-8 bg-card border border-border rounded-lg animate-fade-in-up"
+              className={`grid lg:grid-cols-3 gap-8 items-start p-6 md:p-8 rounded-2xl border border-white/50 shadow-sm hover:shadow-md transition-shadow duration-300 bg-gradient-to-br ${service.gradient}`}
               style={{ animationDelay: `${index * 50}ms` }}
             >
               {/* Icon & Title */}
               <div>
-                <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center mb-4">
-                  <service.icon size={24} className="text-primary" />
+                <div className="w-14 h-14 bg-white/80 backdrop-blur-sm rounded-xl flex items-center justify-center mb-4 shadow-sm">
+                  <service.icon size={28} className="text-primary" />
                 </div>
-                <h2 className="text-xl font-bold mb-2">{service.title}</h2>
+                <h2 className="text-2xl font-bold mb-2 text-foreground">{service.title}</h2>
               </div>
 
               {/* Description */}
               <div>
-                <p className="text-muted-foreground leading-relaxed mb-4">{service.description}</p>
+                <p className="text-foreground/80 leading-relaxed mb-4">{service.description}</p>
 
-                <Button variant="outline" size="sm" asChild className="mb-6 group">
+                <Button variant="outline" size="sm" asChild className="mb-6 group bg-white/50 hover:bg-white border-primary/20 hover:border-primary/50">
                   <Link to={`/services/${service.slug}`}>
                     Read Case Study
                     <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
@@ -93,10 +99,10 @@ export default function Services() {
               </div>
 
               {/* Features */}
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-3">
                 {service.features.map((feature) => (
-                  <div key={feature} className="flex items-center gap-2 text-sm">
-                    <CheckCircle size={14} className="text-primary shrink-0" />
+                  <div key={feature} className="flex items-center gap-2 text-sm font-medium text-foreground/80">
+                    <CheckCircle size={16} className="text-primary shrink-0" />
                     <span>{feature}</span>
                   </div>
                 ))}
