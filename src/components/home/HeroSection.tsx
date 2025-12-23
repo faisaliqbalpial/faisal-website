@@ -98,6 +98,7 @@ export function HeroSection() {
                   src="/EmailMarketingManager.mp4"
                   autoPlay
                   loop
+                  muted
                   playsInline
                   className="w-full h-full object-cover rounded-xl shadow-inner bg-muted"
                 />
