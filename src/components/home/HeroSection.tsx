@@ -1,5 +1,6 @@
+import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, Target, Facebook, Share2, Lightbulb, Mail, Users, Globe, FolderCheck } from "lucide-react";
+import { ArrowRight, Search, Target, Facebook, Share2, Lightbulb, Mail, Users, Globe, FolderCheck, Volume2, VolumeX } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import { CLIENT_COUNT } from "@/data/constants";
@@ -20,6 +21,16 @@ const stats = [
 ];
 
 export function HeroSection() {
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+    }
+  };
+
   return (
     <section className="relative min-h-0 flex flex-col justify-center bg-background overflow-hidden pt-20 pb-6">
       {/* Background decoration */}
@@ -95,13 +106,21 @@ export function HeroSection() {
               {/* Image Gradient Border Wrapper */}
               <div className="relative w-full h-full rounded-2xl p-1.5 bg-gradient-to-br from-primary/30 via-white/20 to-primary/10 shadow-2xl backdrop-blur-sm">
                 <video
+                  ref={videoRef}
                   src="/EmailMarketingManager.mp4"
                   autoPlay
                   loop
-                  muted
+                  muted={isMuted}
                   playsInline
                   className="w-full h-full object-cover rounded-xl shadow-inner bg-muted"
                 />
+                <button
+                  onClick={toggleMute}
+                  className="absolute bottom-4 right-4 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white backdrop-blur-sm transition-all duration-300 z-10"
+                  aria-label={isMuted ? "Unmute video" : "Mute video"}
+                >
+                  {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+                </button>
               </div>
 
               {/* Stats Cards - Floating */}
