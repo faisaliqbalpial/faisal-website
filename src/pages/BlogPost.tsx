@@ -98,7 +98,7 @@ export default function BlogPost() {
                         <img
                             src={post.imageUrl}
                             alt={post.title}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full object-cover object-top"
                         />
                     </div>
                 </div>

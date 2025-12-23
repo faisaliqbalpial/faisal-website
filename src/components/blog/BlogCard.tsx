@@ -17,7 +17,7 @@ export const BlogCard = ({ post }: BlogCardProps) => {
                 <img
                     src={post.imageUrl}
                     alt={post.title}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
                 />
                 <Badge className="absolute top-4 left-4 z-20 bg-primary/90 hover:bg-primary text-primary-foreground border-none">
                     {post.category}
