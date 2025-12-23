@@ -94,9 +94,11 @@ export function HeroSection() {
 
               {/* Image Gradient Border Wrapper */}
               <div className="relative w-full h-full rounded-2xl p-1.5 bg-gradient-to-br from-primary/30 via-white/20 to-primary/10 shadow-2xl backdrop-blur-sm">
-                <img
-                  src="/faisal.jpg"
-                  alt="Faisal Iqbal"
+                <video
+                  src="/EmailMarketingManager.mp4"
+                  autoPlay
+                  loop
+                  playsInline
                   className="w-full h-full object-cover rounded-xl shadow-inner bg-muted"
                 />
               </div>
