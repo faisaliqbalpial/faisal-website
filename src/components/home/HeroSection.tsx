@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, Target, Facebook, Share2, Lightbulb, Mail, Users, Globe, FolderCheck, Volume2, VolumeX } from "lucide-react";
+import { ArrowRight, Search, Target, Facebook, Share2, Lightbulb, Mail, Users, Globe, FolderCheck, Volume2, VolumeX, Play, Pause } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import { CLIENT_COUNT } from "@/data/constants";
@@ -22,12 +22,24 @@ const stats = [
 
 export function HeroSection() {
   const [isMuted, setIsMuted] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const toggleMute = () => {
     setIsMuted(!isMuted);
     if (videoRef.current) {
       videoRef.current.muted = !isMuted;
+    }
+  };
+
+  const togglePlay = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
     }
   };
 
@@ -114,13 +126,22 @@ export function HeroSection() {
                   playsInline
                   className="w-full h-full object-cover rounded-xl shadow-inner bg-muted"
                 />
-                <button
-                  onClick={toggleMute}
-                  className="absolute bottom-4 right-4 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white backdrop-blur-sm transition-all duration-300 z-10"
-                  aria-label={isMuted ? "Unmute video" : "Mute video"}
-                >
-                  {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
-                </button>
+                <div className="absolute bottom-4 right-4 flex gap-2 z-10">
+                  <button
+                    onClick={togglePlay}
+                    className="p-2 rounded-full bg-black/50 hover:bg-black/70 text-white backdrop-blur-sm transition-all duration-300"
+                    aria-label={isPlaying ? "Pause video" : "Play video"}
+                  >
+                    {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+                  </button>
+                  <button
+                    onClick={toggleMute}
+                    className="p-2 rounded-full bg-black/50 hover:bg-black/70 text-white backdrop-blur-sm transition-all duration-300"
+                    aria-label={isMuted ? "Unmute video" : "Mute video"}
+                  >
+                    {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
+                  </button>
+                </div>
               </div>
 
               {/* Stats Cards - Floating */}
