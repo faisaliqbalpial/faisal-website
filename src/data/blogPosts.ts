@@ -132,5 +132,40 @@ export const blogPosts: BlogPost[] = [
     date: "Dec 20, 2024",
     imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
     readTime: "6 min read"
+  },
+  {
+    id: "6",
+    slug: "meet-faisal-iqbal-digital-marketing-expert",
+    title: "Meet Faisal Iqbal: Your Partner in Digital Growth",
+    excerpt: "Get to know Faisal Iqbal, the digital marketing expert dedicated to scaling businesses through SEO, PPC, and data-driven strategies.",
+    content: `
+      <h2>Who is Faisal Iqbal?</h2>
+      <p>In the rapidly evolving world of digital marketing, having a trusted partner can make the difference between stagnation and exponential growth. I am <strong>Faisal Iqbal</strong>, a passionate digital marketing expert with over 5 years of experience helping businesses navigate the digital landscape.</p>
+      
+      <p>My journey hasn't just been about learning tools; it's been about mastering the art of connecting brands with their ideal customers. From small startups to established enterprises, I've had the privilege of driving results that matter—revenue, leads, and brand loyalty.</p>
+
+      <h2>My Core Expertise</h2>
+      <p>Digital marketing is not a one-size-fits-all solution. I specialize in a holistic approach that integrates the most powerful channels available today:</p>
+      <ul>
+        <li><strong>SEO Optimization:</strong> ensuring your business is found by those actively searching for your solutions.</li>
+        <li><strong>Google & Facebook Ads:</strong> Creating high-converting campaigns that maximize your ROI.</li>
+        <li><strong>Email Marketing:</strong> Building automated systems that nurture leads into loyal customers.</li>
+        <li><strong>Digital Strategy:</strong> Crafting bespoke roadmaps that align marketing efforts with business goals.</li>
+      </ul>
+
+      <h2>A Data-Driven Philosophy</h2>
+      <p>I believe that effective marketing is a blend of creativity and science. Every strategy I implement is backed by data. By analyzing metrics and user behavior, I continuously refine campaigns to ensure optimal performance. This data-driven mindset allows me to predict trends and pivot strategies before competitors even catch on.</p>
+
+      <h2>Why Work with Me?</h2>
+      <p>Choosing a marketing consultant is a big decision. When you work with me, "Faisal Iqbal", you're not just hiring a service provider; you're gaining a partner who treats your business as his own. I am committed to transparency, tangible results, and long-term growth.</p>
+
+      <h2>Let's Build Something Great</h2>
+      <p>Whether you're looking to launch a new product, revitalize your brand, or simply get more leads, I'm here to help. Let's connect and discuss how we can take your business to new heights.</p>
+    `,
+    category: "Digital Strategy",
+    author: "Faisal Iqbal",
+    date: "Dec 24, 2024",
+    imageUrl: "/faisal.jpg",
+    readTime: "4 min read"
   }
 ];
