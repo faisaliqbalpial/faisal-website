@@ -63,64 +63,66 @@ export default function ServiceCaseStudy() {
             </section>
 
             {/* Before & After Results */}
-            <section className="py-12 px-4 md:px-8 bg-secondary/20">
-                <div className="container-custom">
-                    <h2 className="text-3xl font-bold text-center mb-12">The Transformation</h2>
+            {study.beforeResults && study.beforeResults.length > 0 && study.afterResults && study.afterResults.length > 0 && (
+                <section className="py-12 px-4 md:px-8 bg-secondary/20">
+                    <div className="container-custom">
+                        <h2 className="text-3xl font-bold text-center mb-12">The Transformation</h2>
 
-                    <div className="grid md:grid-cols-2 gap-8">
-                        {/* Before */}
-                        <div className="bg-red-50/50 dark:bg-red-950/10 border border-red-100 dark:border-red-900/30 rounded-xl p-8 relative overflow-hidden">
-                            <div className="absolute top-0 right-0 p-4 opacity-10">
-                                <AlertCircle size={120} className="text-red-500" />
-                            </div>
-                            <div className="relative z-10">
-                                <div className="flex items-center gap-3 mb-6">
-                                    <div className="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/50 flex items-center justify-center">
-                                        <AlertCircle size={20} className="text-red-600 dark:text-red-400" />
-                                    </div>
-                                    <h3 className="text-xl font-bold text-red-900 dark:text-red-100">Before</h3>
+                        <div className="grid md:grid-cols-2 gap-8">
+                            {/* Before */}
+                            <div className="bg-red-50/50 dark:bg-red-950/10 border border-red-100 dark:border-red-900/30 rounded-xl p-8 relative overflow-hidden">
+                                <div className="absolute top-0 right-0 p-4 opacity-10">
+                                    <AlertCircle size={120} className="text-red-500" />
                                 </div>
-
-                                <div className="space-y-4">
-                                    {study.beforeResults.map((item, idx) => (
-                                        <div key={idx} className="bg-white/60 dark:bg-black/20 backdrop-blur-sm p-4 rounded-lg flex justify-between items-center">
-                                            <span className="text-muted-foreground">{item.metric}</span>
-                                            <span className="font-bold text-red-700 dark:text-red-300">{item.value}</span>
+                                <div className="relative z-10">
+                                    <div className="flex items-center gap-3 mb-6">
+                                        <div className="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/50 flex items-center justify-center">
+                                            <AlertCircle size={20} className="text-red-600 dark:text-red-400" />
                                         </div>
-                                    ))}
+                                        <h3 className="text-xl font-bold text-red-900 dark:text-red-100">Before</h3>
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        {study.beforeResults.map((item, idx) => (
+                                            <div key={idx} className="bg-white/60 dark:bg-black/20 backdrop-blur-sm p-4 rounded-lg flex justify-between items-center">
+                                                <span className="text-muted-foreground">{item.metric}</span>
+                                                <span className="font-bold text-red-700 dark:text-red-300">{item.value}</span>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* After */}
+                            <div className="bg-green-50/50 dark:bg-green-950/10 border border-green-100 dark:border-green-900/30 rounded-xl p-8 relative overflow-hidden shadow-lg transform md:-translate-y-4 transition-transform duration-300">
+                                <div className="absolute top-0 right-0 p-4 opacity-10">
+                                    <TrendingUp size={120} className="text-green-500" />
+                                </div>
+                                <div className="relative z-10">
+                                    <div className="flex items-center gap-3 mb-6">
+                                        <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/50 flex items-center justify-center">
+                                            <TrendingUp size={20} className="text-green-600 dark:text-green-400" />
+                                        </div>
+                                        <h3 className="text-xl font-bold text-green-900 dark:text-green-100">After Results</h3>
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        {study.afterResults.map((item, idx) => (
+                                            <div key={idx} className="bg-white/80 dark:bg-black/40 backdrop-blur-sm p-4 rounded-lg flex justify-between items-center border border-green-100 dark:border-green-900/30">
+                                                <span className="text-gray-600 dark:text-gray-300">{item.metric}</span>
+                                                <span className="font-bold text-green-700 dark:text-green-400 text-lg">{item.value}</span>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        {/* After */}
-                        <div className="bg-green-50/50 dark:bg-green-950/10 border border-green-100 dark:border-green-900/30 rounded-xl p-8 relative overflow-hidden shadow-lg transform md:-translate-y-4 transition-transform duration-300">
-                            <div className="absolute top-0 right-0 p-4 opacity-10">
-                                <TrendingUp size={120} className="text-green-500" />
-                            </div>
-                            <div className="relative z-10">
-                                <div className="flex items-center gap-3 mb-6">
-                                    <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/50 flex items-center justify-center">
-                                        <TrendingUp size={20} className="text-green-600 dark:text-green-400" />
-                                    </div>
-                                    <h3 className="text-xl font-bold text-green-900 dark:text-green-100">After Results</h3>
-                                </div>
-
-                                <div className="space-y-4">
-                                    {study.afterResults.map((item, idx) => (
-                                        <div key={idx} className="bg-white/80 dark:bg-black/40 backdrop-blur-sm p-4 rounded-lg flex justify-between items-center border border-green-100 dark:border-green-900/30">
-                                            <span className="text-gray-600 dark:text-gray-300">{item.metric}</span>
-                                            <span className="font-bold text-green-700 dark:text-green-400 text-lg">{item.value}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        </div>
+                        <p className="text-center text-sm text-muted-foreground mt-8 italic">
+                            * Results may vary based on industry, budget, and starting conditions.
+                        </p>
                     </div>
-                    <p className="text-center text-sm text-muted-foreground mt-8 italic">
-                        * Results may vary based on industry, budget, and starting conditions.
-                    </p>
-                </div>
-            </section>
+                </section>
+            )}
 
             {/* Detailed Case Studies */}
             {study.subCaseStudies && study.subCaseStudies.length > 0 && (

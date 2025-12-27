@@ -91,16 +91,8 @@ export const caseStudies: Record<string, CaseStudy> = {
             problem: "Many businesses struggle with wasted ad spend, low conversion rates, and poor lead quality.",
             goal: "To implement data-driven strategies that maximize Return on Ad Spend (ROAS) and drive high-quality leads.",
         },
-        beforeResults: [
-            { metric: "Avg. Cost Reduction", value: "30-50%" },
-            { metric: "Conversion Rate", value: "Improved" },
-            { metric: "ROAS", value: "High" },
-        ],
-        afterResults: [
-            { metric: "Total Spend Managed", value: "$40k+" },
-            { metric: "Impressions", value: "10M+" },
-            { metric: "Conversions Value", value: "$1M+" },
-        ],
+        beforeResults: [],
+        afterResults: [],
         strategy: [
             {
                 title: "Comprehensive Research",
