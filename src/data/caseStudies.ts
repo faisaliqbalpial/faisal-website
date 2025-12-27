@@ -330,16 +330,8 @@ export const caseStudies: Record<string, CaseStudy> = {
             problem: "Client had a growing email list but sent sporadic, unoptimized newsletters. They were missing out on revenue from abandoned carts and new subscriber welcomes.",
             goal: "Set up a robust Mailchimp automation system to nurture leads and recover lost sales automatically.",
         },
-        beforeResults: [
-            { metric: "Open Rate", value: "12%" },
-            { metric: "Click-Through Rate", value: "1.5%" },
-            { metric: "Revenue from Email", value: "< 5%" },
-        ],
-        afterResults: [
-            { metric: "Open Rate", value: "37%+" },
-            { metric: "Click-Through Rate", value: "4.8%" },
-            { metric: "Revenue Growth", value: "+94.8%" },
-        ],
+        beforeResults: [],
+        afterResults: [],
         strategy: [
             {
                 title: "Automated Flows Setup",
