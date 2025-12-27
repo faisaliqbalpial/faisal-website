@@ -4,7 +4,7 @@ import { CLIENT_COUNT } from "@/data/constants";
 
 const testimonials = [
   {
-    name: "Gazam Khan",
+    name: "Gazam K.",
     country: "United Arab Emirates",
     code: "ae",
     rating: 5,
@@ -13,7 +13,7 @@ const testimonials = [
     duration: "1 day",
   },
   {
-    name: "Scott Cervine",
+    name: "Scott C.",
     country: "United States",
     code: "us",
     rating: 5,
@@ -22,7 +22,7 @@ const testimonials = [
     duration: "4 weeks",
   },
   {
-    name: "Daniela",
+    name: "Daniela V.",
     country: "United States",
     code: "us",
     rating: 5,
@@ -31,7 +31,7 @@ const testimonials = [
     duration: "3 weeks",
   },
   {
-    name: "Matt Chase",
+    name: "Matt C.",
     country: "United States",
     code: "us",
     rating: 5,
@@ -41,7 +41,7 @@ const testimonials = [
     repeat: true,
   },
   {
-    name: "Giancarlo",
+    name: "Giancarlo M.",
     country: "United States",
     code: "us",
     rating: 5,
@@ -51,7 +51,7 @@ const testimonials = [
     repeat: true,
   },
   {
-    name: "Lennard Steeman",
+    name: "Lennard S.",
     country: "Netherlands",
     code: "nl",
     rating: 5,
@@ -60,7 +60,7 @@ const testimonials = [
     duration: "2 weeks",
   },
   {
-    name: "Salvatore",
+    name: "Salvatore D.",
     country: "Austria",
     code: "at",
     rating: 5,
@@ -70,7 +70,7 @@ const testimonials = [
     repeat: true,
   },
   {
-    name: "Michelle Reese",
+    name: "Michelle R.",
     country: "United States",
     code: "us",
     rating: 5,
@@ -80,7 +80,7 @@ const testimonials = [
     repeat: true,
   },
   {
-    name: "Atul Jaiswal",
+    name: "Atul J.",
     country: "India",
     code: "in",
     rating: 5,
@@ -89,7 +89,7 @@ const testimonials = [
     duration: "2 days",
   },
   {
-    name: "Asim Aliloski",
+    name: "Asim A.",
     country: "France",
     code: "fr",
     rating: 5,
@@ -98,7 +98,7 @@ const testimonials = [
     duration: "1 week",
   },
   {
-    name: "Amy Pleasance",
+    name: "Amy P.",
     country: "United States",
     code: "us",
     rating: 5,
@@ -107,7 +107,7 @@ const testimonials = [
     duration: "3 days",
   },
   {
-    name: "Emily Gordon",
+    name: "Emily G.",
     country: "United States",
     code: "us",
     rating: 5,
