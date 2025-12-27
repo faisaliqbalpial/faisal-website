@@ -202,16 +202,8 @@ export const caseStudies: Record<string, CaseStudy> = {
             problem: "Struggling to scale beyond $5k/month in revenue. Ads were breaking even but not profitable enough to grow.",
             goal: "Achieve a 4.0x ROAS (Return on Ad Spend) and scale revenue.",
         },
-        beforeResults: [
-            { metric: "Monthly Revenue", value: "$4,800" },
-            { metric: "ROAS", value: "1.8x" },
-            { metric: "Click-Through Rate", value: "0.9%" },
-        ],
-        afterResults: [
-            { metric: "Monthly Revenue", value: "$28,500" },
-            { metric: "ROAS", value: "4.2x" },
-            { metric: "Click-Through Rate", value: "2.1%" },
-        ],
+        beforeResults: [],
+        afterResults: [],
         strategy: [
             {
                 title: "Creative Testing",
@@ -285,7 +277,9 @@ export const caseStudies: Record<string, CaseStudy> = {
         proofImages: [
             "/fbads1.jpeg",
             "/fbads2.jpeg",
-            "/fbads3.jpeg"
+            "/fbads3.jpeg",
+            "/fbadskidstoybusiness.jpeg",
+            "/fbadswomensclothing.jpeg"
         ],
         clientFeedback: {
             quote: "Our sales exploded within the first two months. The ROI has been incredible.",
