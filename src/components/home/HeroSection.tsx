@@ -119,10 +119,12 @@ export function HeroSection() {
                 <video
                   ref={videoRef}
                   src="/EmailMarketingManager.mp4"
+                  poster="/faisal.jpg"
                   autoPlay
                   loop
                   muted={isMuted}
                   playsInline
+                  preload="metadata"
                   className="w-full h-full object-cover rounded-xl shadow-inner bg-muted"
                 />
                 <div className="absolute bottom-4 right-4 flex gap-2 z-10">
