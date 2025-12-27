@@ -1,6 +1,5 @@
-
 import { Link } from "react-router-dom";
-import { ArrowRight, Check, Clock, Sparkles } from "lucide-react";
+import { ArrowRight, Check, Clock, Sparkles, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function PromotionalBanner() {
@@ -75,12 +74,26 @@ export function PromotionalBanner() {
                                 ))}
                             </ul>
 
-                            <Button asChild size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white shadow-lg shadow-green-200 hover:shadow-green-300/50 transition-all duration-300 h-12 text-base group">
-                                <Link to="/contact">
-                                    Book This Service
-                                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                                </Link>
-                            </Button>
+                            <div className="space-y-3">
+                                <Button asChild size="lg" className="w-full bg-green-600 hover:bg-green-700 text-white shadow-lg shadow-green-200 hover:shadow-green-300/50 transition-all duration-300 h-12 text-base group">
+                                    <Link to="/contact">
+                                        Book This Service
+                                        <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                    </Link>
+                                </Button>
+
+                                <Button asChild variant="outline" size="lg" className="w-full border-green-200 text-green-700 hover:bg-green-50 hover:text-green-800 hover:border-green-300 h-12 text-base">
+                                    <a
+                                        href="https://wa.me/8801951336251"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="gap-2"
+                                    >
+                                        <MessageCircle className="w-5 h-5" />
+                                        Chat on WhatsApp
+                                    </a>
+                                </Button>
+                            </div>
                         </div>
                     </div>
 
