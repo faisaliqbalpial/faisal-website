@@ -95,7 +95,7 @@ export function HeroSection() {
                 {categories.map((category) => (
                   <Link
                     key={category.label}
-                    to={`/services/${category.slug}`}
+                    to={`/portfolio/${category.slug}`}
                     className={`group inline-flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-md ${category.border} hover:bg-secondary/30`}
                   >
                     <div className={`p-1 rounded-full ${category.bg} ${category.color}`}>

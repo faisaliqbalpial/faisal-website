@@ -57,7 +57,7 @@ export function ServicesPreview() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {services.map((service, index) => (
             <Link
-              to={`/services/${service.slug}`}
+              to={`/portfolio/${service.slug}`}
               key={service.title}
               className={`group relative h-[320px] rounded-2xl overflow-hidden border border-border/50 shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2 bg-gradient-to-br ${service.gradient}`}
               style={{ animationDelay: `${(index + 1) * 50}ms` }}
