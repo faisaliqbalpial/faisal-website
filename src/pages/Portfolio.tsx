@@ -1,54 +1,28 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingUp, Users, Target, Share2 } from "lucide-react";
+import { ArrowRight, TrendingUp, Users, Target, Search, Mail, FolderOpen, Share2 } from "lucide-react";
+import { caseStudies } from "@/data/caseStudies";
 
-const projects = [
-  {
-    title: "E-commerce SEO Growth",
-    category: "SEO",
-    icon: TrendingUp,
-    description: "Increased organic traffic by 300% in 6 months through technical SEO and content optimization.",
-    results: ["+300% Organic Traffic", "+150% Revenue", "Page 1 Rankings"],
-  },
-  {
-    title: "SaaS Lead Generation",
-    category: "Google Ads",
-    icon: Target,
-    description: "Generated 500+ qualified leads per month with an optimized Google Ads campaign.",
-    results: ["500+ Leads/Month", "-40% Cost per Lead", "+200% Conversions"],
-  },
-  {
-    title: "Restaurant Chain Social Growth",
-    category: "Social Media",
-    icon: Share2,
-    description: "Grew Instagram following from 2K to 50K+ with engaging content and community management.",
-    results: ["50K+ Followers", "+400% Engagement", "Viral Content"],
-  },
-  {
-    title: "Fitness Brand Awareness",
-    category: "Meta Ads",
-    icon: Users,
-    description: "Launched successful Facebook & Instagram campaigns reaching 2M+ potential customers.",
-    results: ["2M+ Reach", "+500% Brand Awareness", "8x ROAS"],
-  },
-  {
-    title: "Local Business SEO",
-    category: "Local SEO",
-    icon: TrendingUp,
-    description: "Helped a local business rank #1 for key local search terms in their city.",
-    results: ["#1 Local Rankings", "+200% Calls", "+150% Foot Traffic"],
-  },
-  {
-    title: "B2B LinkedIn Campaign",
-    category: "Social Media",
-    icon: Share2,
-    description: "Developed LinkedIn strategy that generated high-quality B2B leads for consulting firm.",
-    results: ["100+ B2B Leads", "+300% Profile Views", "Industry Authority"],
-  },
-];
+// Helper to get icon based on ID
+const getIcon = (id: string) => {
+  switch (id) {
+    case 'seo': return Search;
+    case 'google-ads': return Target;
+    case 'facebook-ads': return Facebook; // Facebook is not imported, let's use Users or define it
+    case 'social-media-management': return Share2;
+    case 'email-marketing': return Mail;
+    default: return FolderOpen;
+  }
+};
+
+// We need to import Facebook if we use it, but lucide-react exports it as Facebook.
+// Let's stick to the imports we have or add Facebook.
+import { Facebook } from "lucide-react";
 
 export default function Portfolio() {
+  const projects = Object.values(caseStudies);
+
   return (
     <Layout>
       {/* Hero */}
@@ -66,42 +40,59 @@ export default function Portfolio() {
       {/* Projects Grid */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {projects.map((project, index) => (
-              <div
-                key={project.title}
-                className="group p-6 bg-card border border-border rounded-lg hover:border-primary/30 transition-all duration-200 animate-fade-in-up"
-                style={{ animationDelay: `${(index % 6) * 50}ms` }}
-              >
-                {/* Icon & Category */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-10 h-10 bg-secondary rounded-lg flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                    <project.icon size={20} className="text-foreground group-hover:text-primary transition-colors" />
-                  </div>
-                  <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded">
-                    {project.category}
-                  </span>
-                </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {projects.map((study, index) => {
+              const Icon = getIcon(study.id);
+              // Extract top 3 results from afterResults, or beforeResults if after is empty
+              const results = study.afterResults.length > 0
+                ? study.afterResults.slice(0, 3)
+                : (study.subCaseStudies?.[0]?.results?.slice(0, 3) || []);
 
-                {/* Content */}
-                <h3 className="font-bold mb-2 group-hover:text-primary transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-muted-foreground mb-4">{project.description}</p>
-
-                {/* Results */}
-                <div className="flex flex-wrap gap-2">
-                  {project.results.map((result) => (
-                    <span
-                      key={result}
-                      className="text-xs bg-secondary px-2 py-1 rounded font-medium"
-                    >
-                      {result}
+              return (
+                <Link
+                  key={study.id}
+                  to={`/portfolio/${study.id}`}
+                  className="group p-6 bg-card border border-border rounded-xl hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in-up flex flex-col h-full"
+                  style={{ animationDelay: `${(index % 6) * 100}ms` }}
+                >
+                  {/* Icon & Category */}
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                      <Icon size={24} className="text-foreground group-hover:text-primary transition-colors" />
+                    </div>
+                    <span className="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">
+                      {study.serviceTitle.split(' ')[0]} {/* Approximate short category */}
                     </span>
-                  ))}
-                </div>
-              </div>
-            ))}
+                  </div>
+
+                  {/* Content */}
+                  <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors leading-tight">
+                    {study.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-6 line-clamp-3 flex-grow">
+                    {study.intro.goal}
+                  </p>
+
+                  {/* Results */}
+                  <div className="mt-auto space-y-3">
+                    <div className="flex flex-wrap gap-2">
+                      {results.map((res, i) => (
+                        <span
+                          key={i}
+                          className="text-xs bg-secondary/80 px-2.5 py-1.5 rounded-md font-medium border border-border/50 text-foreground/80"
+                        >
+                          <span className="font-bold">{res.value}</span> {res.metric}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="pt-4 mt-2 border-t border-border/50 flex items-center text-sm font-semibold text-primary opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
+                      View Case Study <ArrowRight size={16} className="ml-2" />
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

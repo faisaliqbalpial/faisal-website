@@ -84,7 +84,7 @@ export default function Services() {
                 <p className="text-foreground/80 leading-relaxed mb-4">{service.description}</p>
 
                 <Button variant="outline" size="sm" asChild className="mb-6 group bg-white/50 hover:bg-white border-primary/20 hover:border-primary/50">
-                  <Link to={`/services/${service.slug}`}>
+                  <Link to={`/portfolio/${service.slug}`}>
                     Read Case Study
                     <ArrowRight size={16} className="ml-2 transition-transform group-hover:translate-x-1" />
                   </Link>

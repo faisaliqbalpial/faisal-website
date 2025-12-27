@@ -26,9 +26,9 @@ export default function ServiceCaseStudy() {
             {/* Breadcrumb & Navigation */}
             <section className="pt-24 pb-8 px-4 md:px-8 border-b border-border bg-secondary/30">
                 <div className="container-custom">
-                    <Link to="/services" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-6 transition-colors">
+                    <Link to="/portfolio" className="inline-flex items-center text-sm text-muted-foreground hover:text-primary mb-6 transition-colors">
                         <ArrowLeft size={16} className="mr-2" />
-                        Back to Services
+                        Back to Portfolio
                     </Link>
                     <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
                         <div>
