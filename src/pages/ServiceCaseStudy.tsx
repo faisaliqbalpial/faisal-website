@@ -40,7 +40,7 @@ export default function ServiceCaseStudy() {
             </section>
 
             {/* Intro Section */}
-            <section className="section-padding">
+            <section className="py-6 md:py-10 px-4 md:px-8">
                 <div className="container-custom max-w-4xl">
                     <div className="bg-card border border-border rounded-xl p-8 shadow-sm">
                         <h3 className="text-2xl font-bold mb-4">Project Overview</h3>
