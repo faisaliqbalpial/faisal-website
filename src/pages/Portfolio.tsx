@@ -40,10 +40,9 @@ export default function Portfolio() {
       {/* Projects Grid */}
       <section className="section-padding">
         <div className="container-custom">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((study, index) => {
               const Icon = getIcon(study.id);
-              // Extract top 3 results from afterResults, or beforeResults if after is empty
               const results = study.afterResults.length > 0
                 ? study.afterResults.slice(0, 3)
                 : (study.subCaseStudies?.[0]?.results?.slice(0, 3) || []);
@@ -52,42 +51,48 @@ export default function Portfolio() {
                 <Link
                   key={study.id}
                   to={`/portfolio/${study.id}`}
-                  className="group p-6 bg-card border border-border rounded-xl hover:border-primary/30 hover:shadow-lg transition-all duration-300 animate-fade-in-up flex flex-col h-full"
+                  className="group relative flex flex-col h-full bg-card hover:bg-gradient-to-br hover:from-card hover:to-secondary/20 rounded-3xl border border-border/60 hover:border-primary/20 shadow-sm hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 overflow-hidden"
                   style={{ animationDelay: `${(index % 6) * 100}ms` }}
                 >
-                  {/* Icon & Category */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="w-12 h-12 bg-secondary rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                      <Icon size={24} className="text-foreground group-hover:text-primary transition-colors" />
+                  {/* Top Gradient Line Effect */}
+                  <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-transparent via-primary/60 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 ease-out" />
+
+                  {/* Background Blob Effect */}
+                  <div className="absolute -top-20 -right-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-colors duration-500" />
+
+                  <div className="p-8 flex flex-col h-full relative z-10">
+                    {/* Header */}
+                    <div className="flex justify-between items-start mb-8">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-white to-secondary dark:from-zinc-800 dark:to-zinc-900 shadow-[0_8px_16px_-6px_rgba(0,0,0,0.1)] border border-white/50 dark:border-white/5 flex items-center justify-center group-hover:scale-105 group-hover:shadow-[0_8px_20px_-6px_rgba(var(--primary),0.2)] transition-all duration-300">
+                        <Icon strokeWidth={1.5} className="w-8 h-8 text-primary/80 group-hover:text-primary transition-colors" />
+                      </div>
+                      <span className="px-4 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-widest bg-primary/10 text-primary border border-primary/10 shadow-sm">
+                        {study.serviceTitle.split(' ')[0]}
+                      </span>
                     </div>
-                    <span className="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">
-                      {study.serviceTitle.split(' ')[0]} {/* Approximate short category */}
-                    </span>
-                  </div>
 
-                  {/* Content */}
-                  <h3 className="text-xl font-bold mb-3 group-hover:text-primary transition-colors leading-tight">
-                    {study.title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground mb-6 line-clamp-3 flex-grow">
-                    {study.intro.goal}
-                  </p>
+                    {/* Title & Intro */}
+                    <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors leading-tight">
+                      {study.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-8 line-clamp-3">
+                      {study.intro.goal}
+                    </p>
 
-                  {/* Results */}
-                  <div className="mt-auto space-y-3">
-                    <div className="flex flex-wrap gap-2">
+                    {/* Results Cards */}
+                    <div className="mt-auto space-y-3 mb-8">
                       {results.map((res, i) => (
-                        <span
-                          key={i}
-                          className="text-xs bg-secondary/80 px-2.5 py-1.5 rounded-md font-medium border border-border/50 text-foreground/80"
-                        >
-                          <span className="font-bold">{res.value}</span> {res.metric}
-                        </span>
+                        <div key={i} className="flex justify-between items-center py-2.5 px-4 rounded-xl bg-secondary/40 border border-transparent group-hover:border-primary/5 group-hover:bg-secondary/60 transition-all duration-300">
+                          <span className="text-xs font-semibold text-muted-foreground/80 uppercase tracking-wide">{res.metric}</span>
+                          <span className="text-sm font-bold text-foreground">{res.value}</span>
+                        </div>
                       ))}
                     </div>
 
-                    <div className="pt-4 mt-2 border-t border-border/50 flex items-center text-sm font-semibold text-primary opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                      View Case Study <ArrowRight size={16} className="ml-2" />
+                    {/* CTA */}
+                    <div className="flex items-center text-sm font-bold text-primary">
+                      <span className="border-b-2 border-transparent group-hover:border-primary/30 pb-0.5 transition-colors">Read Case Study</span>
+                      <ArrowRight className="w-4 h-4 ml-2 transform group-hover:translate-x-1 duration-300" />
                     </div>
                   </div>
                 </Link>
