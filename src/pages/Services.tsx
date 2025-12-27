@@ -75,7 +75,8 @@ export default function Services() {
           {services.map((service, index) => (
             <div
               key={service.title}
-              className={`grid lg:grid-cols-3 gap-8 items-start p-6 md:p-8 rounded-2xl border border-white/50 shadow-sm hover:shadow-md transition-shadow duration-300 bg-gradient-to-br ${service.gradient}`}
+              id={service.slug}
+              className={`grid lg:grid-cols-3 gap-8 items-start p-6 md:p-8 rounded-2xl border border-white/50 shadow-sm hover:shadow-md transition-shadow duration-300 bg-gradient-to-br ${service.gradient} scroll-mt-32`}
               style={{ animationDelay: `${index * 50}ms` }}
             >
               {/* Icon & Title */}

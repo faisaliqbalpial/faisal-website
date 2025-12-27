@@ -6,12 +6,12 @@ import { Button } from "@/components/ui/button";
 import { CLIENT_COUNT } from "@/data/constants";
 
 const categories = [
-  { label: "SEO Optimization", icon: Search, color: "text-blue-500", bg: "bg-blue-500/10", border: "hover:border-blue-500/50" },
-  { label: "Google Ads", icon: Target, color: "text-orange-500", bg: "bg-orange-500/10", border: "hover:border-orange-500/50" },
-  { label: "Facebook Ads", icon: Facebook, color: "text-indigo-500", bg: "bg-indigo-500/10", border: "hover:border-indigo-500/50" },
-  { label: "Social Media", icon: Share2, color: "text-pink-500", bg: "bg-pink-500/10", border: "hover:border-pink-500/50" },
-  { label: "Digital Strategy", icon: Lightbulb, color: "text-emerald-500", bg: "bg-emerald-500/10", border: "hover:border-emerald-500/50" },
-  { label: "Email Marketing", icon: Mail, color: "text-amber-500", bg: "bg-amber-500/10", border: "hover:border-amber-500/50" },
+  { label: "SEO Optimization", icon: Search, color: "text-blue-500", bg: "bg-blue-500/10", border: "hover:border-blue-500/50", slug: "seo" },
+  { label: "Google Ads", icon: Target, color: "text-orange-500", bg: "bg-orange-500/10", border: "hover:border-orange-500/50", slug: "google-ads" },
+  { label: "Facebook Ads", icon: Facebook, color: "text-indigo-500", bg: "bg-indigo-500/10", border: "hover:border-indigo-500/50", slug: "facebook-ads" },
+  { label: "Social Media", icon: Share2, color: "text-pink-500", bg: "bg-pink-500/10", border: "hover:border-pink-500/50", slug: "social-media-management" },
+  { label: "Digital Strategy", icon: Lightbulb, color: "text-emerald-500", bg: "bg-emerald-500/10", border: "hover:border-emerald-500/50", slug: "digital-strategy" },
+  { label: "Email Marketing", icon: Mail, color: "text-amber-500", bg: "bg-amber-500/10", border: "hover:border-amber-500/50", slug: "email-marketing" },
 ];
 
 const stats = [
@@ -96,7 +96,7 @@ export function HeroSection() {
                 {categories.map((category) => (
                   <Link
                     key={category.label}
-                    to="/services"
+                    to={`/services/${category.slug}`}
                     className={`group inline-flex items-center gap-2 px-4 py-2 bg-card border border-border rounded-full text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-md ${category.border} hover:bg-secondary/30`}
                   >
                     <div className={`p-1 rounded-full ${category.bg} ${category.color}`}>
