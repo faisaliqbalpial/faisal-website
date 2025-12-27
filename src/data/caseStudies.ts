@@ -324,9 +324,9 @@ export const caseStudies: Record<string, CaseStudy> = {
     "email-marketing": {
         id: "email-marketing",
         serviceTitle: "Email Marketing & Automation",
-        title: "Driving 30% More Sales with Automated Email Flows",
+        title: "Generating DKK 297k+ Revenue with Advanced Email Flows",
         intro: {
-            client: "E-commerce Startup",
+            client: "E-commerce Brand (HOCL.dk)",
             problem: "Client had a growing email list but sent sporadic, unoptimized newsletters. They were missing out on revenue from abandoned carts and new subscriber welcomes.",
             goal: "Set up a robust Mailchimp automation system to nurture leads and recover lost sales automatically.",
         },
@@ -336,9 +336,9 @@ export const caseStudies: Record<string, CaseStudy> = {
             { metric: "Revenue from Email", value: "< 5%" },
         ],
         afterResults: [
-            { metric: "Open Rate", value: "35%" },
+            { metric: "Open Rate", value: "37%+" },
             { metric: "Click-Through Rate", value: "4.8%" },
-            { metric: "Revenue from Email", value: "22%" },
+            { metric: "Revenue Growth", value: "+94.8%" },
         ],
         strategy: [
             {
@@ -353,6 +353,72 @@ export const caseStudies: Record<string, CaseStudy> = {
                 title: "Responsive Design Overhaul",
                 description: "Designed mobile-friendly, visually appealing templates that improved readability and click-throughs."
             }
+        ],
+        methodology: [
+            "Account Audit & Cleanup",
+            "Template Design (Mobile Responsive)",
+            "Automation Setup (Welcome, Abandoned Cart)",
+            "List Segmentation",
+            "A/B Testing Subject Lines",
+            "Campaign Scheduling",
+            "Performance Reporting"
+        ],
+        subCaseStudies: [
+            {
+                title: "Welcome Automation Flow",
+                goal: "Convert new subscribers into first-time buyers",
+                whatIDid: [
+                    "Designed 3-part welcome series",
+                    "Offer integration",
+                    "Personalized subject lines"
+                ],
+                results: [
+                    { metric: "Open Rate", value: "74.2%" },
+                    { metric: "CTR", value: "19.8%" },
+                    { metric: "Revenue", value: "DKK 38K" }
+                ],
+                outcome: "A single automation generated consistent passive revenue.",
+                image: "/emailmarketing2.png"
+            },
+            {
+                title: "Year-to-Date Growth",
+                goal: "Scale email revenue channel",
+                whatIDid: [
+                    "Consistent newsletter schedule",
+                    "List hygiene",
+                    "Content optimization"
+                ],
+                results: [
+                    { metric: "Revenue", value: "DKK 297K" },
+                    { metric: "Growth", value: "+94.8%" },
+                    { metric: "Open Rate", value: "37.1%" }
+                ],
+                outcome: "Email became a primary revenue driver for the business.",
+                image: "/emailmarketing1.png"
+            },
+            {
+                title: "Campaign Optimization",
+                goal: "Improve deliverability and engagement",
+                whatIDid: [
+                    "Spam test optimization",
+                    "Send time optimization",
+                    "Subject line testing"
+                ],
+                results: [
+                    { metric: "Delivery Rate", value: "99.7%" },
+                    { metric: "Open Rate", value: "42.8%" },
+                    { metric: "Click Rate", value: "2.4%" }
+                ],
+                outcome: "Achieved industry-leading open ratings and delivery.",
+                image: "/emailmarketing.png"
+            }
+        ],
+        proofImages: [
+            "/emailmarketing.png",
+            "/emailmarketing1.png",
+            "/emailmarketing2.png",
+            "/emailmarketing3.png",
+            "/emailmarketing4.png"
         ],
         clientFeedback: {
             quote: "The automation runs itself and brings in sales while I sleep. Best investment we've made.",
