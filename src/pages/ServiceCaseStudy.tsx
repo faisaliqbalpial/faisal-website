@@ -122,6 +122,81 @@ export default function ServiceCaseStudy() {
                 </div>
             </section>
 
+            {/* Detailed Case Studies */}
+            {study.subCaseStudies && study.subCaseStudies.length > 0 && (
+                <section className="section-padding bg-secondary/10 border-y border-border/50">
+                    <div className="container-custom">
+                        <h2 className="text-3xl font-bold text-center mb-12">Detailed Case Studies</h2>
+                        <div className="grid gap-12">
+                            {study.subCaseStudies.map((subStudy, index) => (
+                                <div key={index} className="bg-card border border-border rounded-xl overflow-hidden shadow-sm flex flex-col lg:flex-row hover:shadow-md transition-shadow">
+                                    <div className="lg:w-1/2 p-6 md:p-8 flex flex-col justify-center">
+                                        <div className="inline-block bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-full mb-4 w-fit">
+                                            Case Study {index + 1}
+                                        </div>
+                                        <h3 className="text-2xl font-bold mb-6">{subStudy.title}</h3>
+                                        <div className="space-y-6">
+                                            {subStudy.goal && (
+                                                <div>
+                                                    <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">Goal</h4>
+                                                    <p className="font-medium text-lg">{subStudy.goal}</p>
+                                                </div>
+                                            )}
+                                            {subStudy.whatIDid && (
+                                                <div>
+                                                    <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">What I Did</h4>
+                                                    <ul className="grid sm:grid-cols-2 gap-2 text-muted-foreground">
+                                                        {subStudy.whatIDid.map((item, i) => (
+                                                            <li key={i} className="flex items-start gap-2 text-sm">
+                                                                <CheckCircle size={14} className="mt-1 text-primary shrink-0" />
+                                                                <span>{item}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
+                                            )}
+                                            {subStudy.outcome && (
+                                                <div>
+                                                    <h4 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-2">Outcome</h4>
+                                                    <p className="font-medium text-primary text-lg">{subStudy.outcome}</p>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                    <div className="lg:w-1/2 bg-muted relative min-h-[350px]">
+                                        {subStudy.image ? (
+                                            <img
+                                                src={subStudy.image}
+                                                alt={subStudy.title}
+                                                className="absolute inset-0 w-full h-full object-contain bg-neutral-900"
+                                                loading="lazy"
+                                            />
+                                        ) : (
+                                            <div className="absolute inset-0 flex items-center justify-center text-muted-foreground p-8">
+                                                <span>No Image Available</span>
+                                            </div>
+                                        )}
+                                        {/* Overlay stats if image exists and results are present */}
+                                        {subStudy.image && subStudy.results && subStudy.results.length > 0 && (
+                                            <div className="absolute inset-x-0 bottom-0 bg-black/80 backdrop-blur-md p-4 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/10">
+                                                {subStudy.results.map((res, i) => (
+                                                    <div key={i} className="text-center text-white">
+                                                        <div className="font-bold text-lg md:text-xl text-primary-foreground">{res.value}</div>
+                                                        <div className="text-[10px] md:text-xs text-white/70 uppercase truncate">{res.metric}</div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+
+
             {/* Strategy Section */}
             <section className="section-padding">
                 <div className="container-custom max-w-4xl">
@@ -143,6 +218,49 @@ export default function ServiceCaseStudy() {
                     </div>
                 </div>
             </section>
+
+            {/* Methodology Section */}
+            {study.methodology && study.methodology.length > 0 && (
+                <section className="section-padding bg-secondary/5">
+                    <div className="container-custom max-w-4xl">
+                        <h2 className="text-3xl font-bold mb-10 text-center">How I Work</h2>
+                        <div className="grid md:grid-cols-2 gap-4">
+                            {study.methodology.map((step, index) => (
+                                <div key={index} className="flex items-center gap-3 p-4 bg-card rounded-lg border border-border hover:border-primary/50 transition-colors shadow-sm">
+                                    <CheckCircle size={20} className="text-primary flex-shrink-0" />
+                                    <span className="font-medium">{step}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
+
+            {/* Proof Images Section */}
+            {study.proofImages && study.proofImages.length > 0 && (
+                <section className="section-padding">
+                    <div className="container-custom">
+                        <h2 className="text-3xl font-bold mb-10 text-center">Proof of Performance</h2>
+                        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {study.proofImages.map((img, index) => (
+                                <div key={index} className="rounded-xl overflow-hidden border border-border shadow-sm hover:shadow-lg transition-all duration-300 cursor-pointer group bg-card">
+                                    <div className="overflow-hidden aspect-video relative">
+                                        <img
+                                            src={img}
+                                            alt={`Proof ${index + 1}`}
+                                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                            onError={(e) => {
+                                                (e.target as HTMLImageElement).style.display = 'none';
+                                            }}
+                                        />
+                                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            )}
 
             {/* Client Feedback */}
             {study.clientFeedback && (

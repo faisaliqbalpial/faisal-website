@@ -25,6 +25,19 @@ export interface CaseStudy {
         author: string;
         role: string;
     };
+    subCaseStudies?: {
+        title: string;
+        goal?: string;
+        whatIDid?: string[];
+        results?: {
+            metric: string;
+            value: string;
+        }[];
+        outcome?: string;
+        image?: string;
+    }[];
+    methodology?: string[];
+    proofImages?: string[];
 }
 
 export const caseStudies: Record<string, CaseStudy> = {
@@ -72,35 +85,120 @@ export const caseStudies: Record<string, CaseStudy> = {
     "google-ads": {
         id: "google-ads",
         serviceTitle: "Google Ads Management",
-        title: "Reducing Cost Per Lead by 65% for a SaaS Company",
+        title: "Proven Results: High-ROI Google Ads Campaigns",
         intro: {
-            client: "B2B SaaS Provider",
-            problem: "The client was running ads but burning budget on irrelevant clicks. Their cost per lead (CPL) was unsustainable at over $150.",
-            goal: "Optimize campaign structure to lower CPL below $60 and increase lead quality.",
+            client: "Various Clients",
+            problem: "Many businesses struggle with wasted ad spend, low conversion rates, and poor lead quality.",
+            goal: "To implement data-driven strategies that maximize Return on Ad Spend (ROAS) and drive high-quality leads.",
         },
         beforeResults: [
-            { metric: "Cost Per Lead (CPL)", value: "$152.00" },
-            { metric: "Conversion Rate", value: "1.2%" },
-            { metric: "Wasted Spend", value: "~40%" },
+            { metric: "Avg. Cost Reduction", value: "30-50%" },
+            { metric: "Conversion Rate", value: "Improved" },
+            { metric: "ROAS", value: "High" },
         ],
         afterResults: [
-            { metric: "Cost Per Lead (CPL)", value: "$48.50" },
-            { metric: "Conversion Rate", value: "4.8%" },
-            { metric: "Lead Volume", value: "+210% increase" },
+            { metric: "Total Spend Managed", value: "$40k+" },
+            { metric: "Impressions", value: "10M+" },
+            { metric: "Conversions Value", value: "$1M+" },
         ],
         strategy: [
             {
-                title: "Keyword Cleanup",
-                description: "Added extensive negative keyword lists to stop paying for irrelevant searches."
+                title: "Comprehensive Research",
+                description: "Deep dive into keywords, competitors, and market trends to build a solid foundation."
             },
             {
-                title: "Landing Page Optimization",
-                description: "Redesigned the landing page to match ad copy, improving Quality Score and conversion rates."
+                title: "Strategic Structure",
+                description: "Organized campaigns with smart bidding, negative keywords, and high-quality ad copy."
             },
             {
-                title: "Smart Bidding",
-                description: "Switched to Target CPA bidding to let Google's AI optimize for conversions within our budget."
+                title: "Continuous Optimization",
+                description: "Regular A/B testing, bid adjustments, and landing page audits to ensure peak performance."
             }
+        ],
+        methodology: [
+            "Business Understanding",
+            "Competitor Research",
+            "Keyword Research",
+            "Google Search Campaign Setup",
+            "YouTube & Display Ads",
+            "Conversion Tracking (GA4, GTM)",
+            "Remarketing Setup",
+            "Landing Page Audit",
+            "A/B Testing",
+            "Bidding Strategies (Max Conversions, tCPA, tROAS)",
+            "Monthly Optimization & Reporting"
+        ],
+        subCaseStudies: [
+            {
+                title: "Case Study 1: E-commerce Growth",
+                goal: "Increase conversions & reduce wasted spend",
+                whatIDid: [
+                    "Structured keyword setup",
+                    "Negative keyword expansion",
+                    "Smart bidding",
+                    "Conversion tracking",
+                    "Ad copy improvement"
+                ],
+                results: [
+                    { metric: "Impressions", value: "2.44M" },
+                    { metric: "Conversion Value", value: "$249K" },
+                    { metric: "Cost per Conversion", value: "$5.64" },
+                    { metric: "Total Spend", value: "$44.2K" }
+                ],
+                outcome: "Consistent sales growth with high ROAS.",
+                image: "/Case Study 1.png"
+            },
+            {
+                title: "Case Study 2: Low Click, High Result Strategy",
+                goal: "Reduce cost, increase conversions",
+                whatIDid: [
+                    "Phrase + exact keyword combination",
+                    "Removed low-quality traffic",
+                    "Bid optimization",
+                    "A/B testing"
+                ],
+                results: [],
+                outcome: "Less clicks, less cost—more profitable conversions.",
+                image: "/Case Study 2.png"
+            },
+            {
+                title: "Case Study 3: Brand Reach + Sales",
+                results: [
+                    { metric: "Impressions", value: "10.8M" },
+                    { metric: "Conversion Value", value: "939K" },
+                    { metric: "Spend", value: "$40.9K" },
+                    { metric: "Cost/Conv. Value", value: "22.98" }
+                ],
+                image: "/Case Study 3.png"
+            },
+            {
+                title: "Case Study 4: Online Course",
+                goal: "Generate more leads",
+                whatIDid: [
+                    "Performed keyword research",
+                    "Restructured the campaigns",
+                    "Added negative keywords",
+                    "Set up conversion tracking",
+                    "Optimized bidding strategies",
+                    "Improved ad copy",
+                    "Audited the landing page"
+                ],
+                results: [
+                    { metric: "Impression", value: "55.9k" },
+                    { metric: "Phone Call", value: "468" },
+                    { metric: "Avg. CPC", value: "$4.57" },
+                    { metric: "CTR", value: "4.40%" }
+                ],
+                outcome: "The campaign generated high-quality phone leads with improved performance and efficient cost.",
+                image: "/Case Study 4.png"
+            }
+        ],
+        proofImages: [
+            "/Google Ads performance.png",
+            "/additional proofs of my Google Ads performance.png",
+            "/additional proofs of my Google Ads performance (2).png",
+            "/additional proofs of my Google Ads performance (3).png",
+            "/additional proofs of my Google Ads performance (4).png"
         ]
     },
     "facebook-ads": {
