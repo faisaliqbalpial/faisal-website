@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, Target, Facebook, Share2, Lightbulb, Mail, Users, Globe, FolderCheck, Volume2, VolumeX, Play, Pause } from "lucide-react";
+import { ArrowRight, Search, Target, Facebook, Share2, Mail, Users, Globe, FolderCheck, Volume2, VolumeX, Play, Pause } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import { CLIENT_COUNT } from "@/data/constants";
@@ -10,7 +10,6 @@ const categories = [
   { label: "Google Ads", icon: Target, color: "text-orange-500", bg: "bg-orange-500/10", border: "hover:border-orange-500/50", slug: "google-ads" },
   { label: "Facebook Ads", icon: Facebook, color: "text-indigo-500", bg: "bg-indigo-500/10", border: "hover:border-indigo-500/50", slug: "facebook-ads" },
   { label: "Social Media", icon: Share2, color: "text-pink-500", bg: "bg-pink-500/10", border: "hover:border-pink-500/50", slug: "social-media-management" },
-  { label: "Digital Strategy", icon: Lightbulb, color: "text-emerald-500", bg: "bg-emerald-500/10", border: "hover:border-emerald-500/50", slug: "digital-strategy" },
   { label: "Email Marketing", icon: Mail, color: "text-amber-500", bg: "bg-amber-500/10", border: "hover:border-amber-500/50", slug: "email-marketing" },
 ];
 

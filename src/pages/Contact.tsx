@@ -179,7 +179,6 @@ export default function Contact() {
                       <option value="google-ads">Google Ads Management</option>
                       <option value="meta-ads">Facebook & Instagram Ads</option>
                       <option value="social-media">Social Media Management</option>
-                      <option value="strategy">Full Digital Strategy</option>
                       <option value="other">Other</option>
                     </select>
                   </div>

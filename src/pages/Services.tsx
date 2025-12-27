@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/layout/Layout";
 import { Button } from "@/components/ui/button";
-import { Search, Target, Facebook, Share2, Lightbulb, ArrowRight, CheckCircle, Mail } from "lucide-react";
+import { Search, Target, Facebook, Share2, ArrowRight, CheckCircle, Mail } from "lucide-react";
 
 const services = [
   {
@@ -35,14 +35,6 @@ const services = [
     features: ["Content Creation", "Posting Calendar", "Community Management", "Analytics & Reporting", "Brand Building", "Engagement Growth"],
     slug: "social-media-management",
     gradient: "from-indigo-50 to-blue-100",
-  },
-  {
-    icon: Lightbulb,
-    title: "Full Digital Strategy",
-    description: "Let's build a complete digital marketing strategy aligned with your business goals. From awareness to conversion, I help you unify all your channels for maximum impact and results.",
-    features: ["Market Research", "Competitor Analysis", "Channel Strategy", "Campaign Planning", "Performance Metrics", "Growth Roadmap"],
-    slug: "digital-strategy",
-    gradient: "from-slate-50 to-gray-100",
   },
   {
     icon: Mail,

@@ -69,7 +69,6 @@ export function Footer() {
               <li>Google Ads Management</li>
               <li>Facebook & Instagram Ads</li>
               <li>Social Media Management</li>
-              <li>Full Digital Strategy</li>
             </ul>
           </div>
 

@@ -266,45 +266,6 @@ export const caseStudies: Record<string, CaseStudy> = {
             }
         ]
     },
-    "digital-strategy": {
-        id: "digital-strategy",
-        serviceTitle: "Full Digital Strategy",
-        title: "Holistic Transformation: From Offline to Online Dominance",
-        intro: {
-            client: "Traditional Retail Chain",
-            problem: "Sales were declining in physical stores. They had no cohesive digital strategy and disjointed marketing efforts.",
-            goal: "Digitize the business model and create an omnichannel marketing machine.",
-        },
-        beforeResults: [
-            { metric: "Online Sales share", value: "5%" },
-            { metric: "Customer Acquisition Cost", value: "Unknown/High" },
-            { metric: "Email Open Rate", value: "12%" },
-        ],
-        afterResults: [
-            { metric: "Online Sales share", value: "35%" },
-            { metric: "Customer Acquisition Cost", value: "Tracked & Lowered" },
-            { metric: "Email Open Rate", value: "28%" },
-        ],
-        strategy: [
-            {
-                title: "Omnichannel Integration",
-                description: "Connected POS data with online marketing to retarget in-store shoppers online."
-            },
-            {
-                title: "Data-Driven Decisions",
-                description: "Implemented a dashboard to track KPIs across all channels in real-time."
-            },
-            {
-                title: "Lifecycle Marketing",
-                description: "Developed automated email flows to nurture leads and retain customers."
-            }
-        ],
-        clientFeedback: {
-            quote: "This strategy didn't just change our marketing; it saved our business.",
-            author: "David R.",
-            role: "CEO"
-        }
-    },
     "email-marketing": {
         id: "email-marketing",
         serviceTitle: "Email Marketing & Automation",

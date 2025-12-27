@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Search, Target, Facebook, Share2, Lightbulb, ArrowRight, Mail } from "lucide-react";
+import { Search, Target, Facebook, Share2, ArrowRight, Mail } from "lucide-react";
 
 const services = [
   {
@@ -29,13 +29,6 @@ const services = [
     description: "Full control of your social media – content, posting, engagement, and analytics.",
     gradient: "from-indigo-50 to-blue-100",
     slug: "social-media-management",
-  },
-  {
-    icon: Lightbulb,
-    title: "Digital Strategy",
-    description: "Complete marketing strategy aligned with your goals for maximum impact.",
-    gradient: "from-slate-50 to-gray-100",
-    slug: "digital-strategy",
   },
   {
     icon: Mail,

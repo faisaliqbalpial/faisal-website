@@ -12,10 +12,12 @@ export default function ServiceCaseStudy() {
     const study = slug ? caseStudies[slug] : undefined;
 
     useEffect(() => {
-        if (!study) {
+        if (slug === "digital-strategy") {
+            navigate("/services", { replace: true });
+        } else if (!study) {
             navigate("/404");
         }
-    }, [study, navigate]);
+    }, [study, slug, navigate]);
 
     if (!study) return null;
 

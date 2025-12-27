@@ -9,7 +9,7 @@ export default function Blog() {
         document.title = "Blog - Digital Marketing Insights | Faisal Iqbal";
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.setAttribute("content", "Explore expert insights on SEO, Google Ads, Email Marketing, and Digital Strategy. Stay ahead with the latest digital marketing trends.");
+            metaDescription.setAttribute("content", "Explore expert insights on SEO, Google Ads, and Email Marketing. Stay ahead with the latest digital marketing trends.");
         }
     }, []);
 
