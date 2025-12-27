@@ -226,6 +226,67 @@ export const caseStudies: Record<string, CaseStudy> = {
                 description: "Built high-intent lookalike audiences based on customer purchase data."
             }
         ],
+        methodology: [
+            "Pixel & CAPI Setup",
+            "Audience Research & Segmentation",
+            "Creative Strategy & Hooks",
+            "Full-Funnel Campaign Structure",
+            "Retargeting & DPA Setup",
+            "A/B Testing (Creatives & Audiences)",
+            "Scaling & Budget Optimization"
+        ],
+        subCaseStudies: [
+            {
+                title: "Campaign 1: Scaling Revenue",
+                goal: "Scale sales while maintaining profitability",
+                whatIDid: [
+                    "Audience Segmentation",
+                    "Creative Testing (Video vs Static)",
+                    "Lookalike Scaling"
+                ],
+                results: [
+                    { metric: "Revenue", value: "$53.4K" },
+                    { metric: "ROAS", value: "4.5x" }
+                ],
+                outcome: "Successfully scaled revenue with high ROAS.",
+                image: "/fbads1.jpeg"
+            },
+            {
+                title: "Campaign 2: Retargeting Setup",
+                goal: "Recover abandoned carts & boost LTV",
+                whatIDid: [
+                    "Dynamic Product Ads (DPA)",
+                    "Catalog Setup",
+                    "Advanced Retargeting Funnel"
+                ],
+                results: [
+                    { metric: "Rec. Revenue", value: "$12K" },
+                    { metric: "CPA", value: "$8.50" }
+                ],
+                outcome: "Recovered lost sales efficiently.",
+                image: "/fbads2.jpeg"
+            },
+            {
+                title: "Campaign 3: Lead Generation",
+                goal: "Result-driven Strategy",
+                whatIDid: [
+                    "Lead Form Optimization",
+                    "Targeting Refinement",
+                    "Offer Optimization"
+                ],
+                results: [
+                    { metric: "Leads", value: "150+" },
+                    { metric: "Cost/Lead", value: "$2.80" }
+                ],
+                outcome: "Consistent lead flow at low cost.",
+                image: "/fbads3.jpeg"
+            }
+        ],
+        proofImages: [
+            "/fbads1.jpeg",
+            "/fbads2.jpeg",
+            "/fbads3.jpeg"
+        ],
         clientFeedback: {
             quote: "Our sales exploded within the first two months. The ROI has been incredible.",
             author: "Michael T.",
