@@ -118,7 +118,7 @@ export function HeroSection() {
               <div className="relative w-full h-full rounded-2xl p-1.5 bg-gradient-to-br from-primary/30 via-white/20 to-primary/10 shadow-2xl backdrop-blur-sm">
                 <video
                   ref={videoRef}
-                  src="/EmailMarketingManager.mp4"
+                  src="/email-marketing-manager.mp4"
                   poster="/faisal.jpg"
                   autoPlay
                   loop
