@@ -114,5 +114,32 @@ export const blogPosts: BlogPost[] = [
     date: "Dec 20, 2024",
     imageUrl: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=800",
     readTime: "6 min read"
+  },
+  {
+    id: "6",
+    slug: "local-seo-strategies-2026",
+    title: "Dominating Local Search: Essential Local SEO Strategies for 2026",
+    excerpt: "Learn how to capture local traffic and outrank competitors in your area with these proven Local SEO tactics.",
+    content: `
+      <h2>Why Local SEO Matters More Than Ever</h2>
+      <p>For small and medium-sized businesses, the battle for visibility often happens right in the neighborhood. With "Near Me" searches continuing to skyrocket, showing up in the local pack is no longer optional—it's survival.</p>
+
+      <h2>1. Master Your Google Business Profile</h2>
+      <p>Your Google Business Profile (formerly Google My Business) is the cornerstone of your local presence. Ensure your NAP (Name, Address, Phone Number) is consistent, choose the correct categories, and upload high-quality photos regularly.</p>
+
+      <h2>2. The Power of Local Reviews</h2>
+      <p>Reviews are a major ranking factor. Encourage satisfied customers to leave detailed reviews. Respond to every review—positive or negative—to show that you value customer feedback and engagement.</p>
+
+      <h2>3. Local Keywords and On-Page Optimization</h2>
+      <p>Don't just optimize for "Plumber"; optimize for "Plumber in Dhaka" or "Emergency Plumber Dhanmondi". Incorporate these geo-specific keywords naturally into your H1 tags, meta descriptions, and body content.</p>
+
+      <h2>Conclusion</h2>
+      <p>Local SEO is a long-term game, but the payoff is substantial. By focusing on proximity, relevance, and prominence, you can dominate your local market in 2026.</p>
+    `,
+    category: "SEO",
+    author: "Faisal Iqbal",
+    date: "Jan 04, 2026",
+    imageUrl: "https://images.unsplash.com/photo-1572021335469-31706a17aaef?auto=format&fit=crop&q=80&w=800",
+    readTime: "5 min read"
   }
 ];
