@@ -79,7 +79,7 @@ export function Footer() {
           </div>
 
           {/* Contact Box */}
-          <div className="col-span-2 lg:col-span-1 p-4 md:p-6 rounded-2xl bg-background/5 backdrop-blur-sm border border-background/10 hover:bg-background/10 hover:border-primary/30 transition-all duration-300">
+          <div className="p-4 md:p-6 rounded-2xl bg-background/5 backdrop-blur-sm border border-background/10 hover:bg-background/10 hover:border-primary/30 transition-all duration-300">
             <h4 className="text-sm md:text-base font-semibold mb-4 md:mb-6 text-background flex items-center gap-2">
               Contact
               <span className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent"></span>
