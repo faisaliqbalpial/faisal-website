@@ -26,7 +26,7 @@ export function Footer() {
 
       <div className="container-custom section-padding relative z-10">
         {/* Main footer content with box design */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 lg:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5 lg:gap-8">
           {/* Brand Box */}
           <div className="col-span-2 lg:col-span-1 p-4 md:p-6 rounded-2xl bg-background/5 backdrop-blur-sm border border-background/10 hover:bg-background/10 hover:border-primary/30 transition-all duration-300 group">
             <div className="space-y-4">
@@ -78,22 +78,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Services Box */}
-          <div className="p-4 md:p-6 rounded-2xl bg-background/5 backdrop-blur-sm border border-background/10 hover:bg-background/10 hover:border-primary/30 transition-all duration-300">
-            <h4 className="text-sm md:text-base font-semibold mb-4 md:mb-6 text-background flex items-center gap-2">
-              Services
-              <span className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent"></span>
-            </h4>
-            <ul className="space-y-3 text-sm text-background/70">
-              <li className="hover:text-primary hover:translate-x-1 transition-all duration-200 cursor-default">SEO Optimization</li>
-              <li className="hover:text-primary hover:translate-x-1 transition-all duration-200 cursor-default">Google Ads Management</li>
-              <li className="hover:text-primary hover:translate-x-1 transition-all duration-200 cursor-default">Facebook & Instagram Ads</li>
-              <li className="hover:text-primary hover:translate-x-1 transition-all duration-200 cursor-default">Social Media Management</li>
-            </ul>
-          </div>
-
           {/* Contact Box */}
-          <div className="p-4 md:p-6 rounded-2xl bg-background/5 backdrop-blur-sm border border-background/10 hover:bg-background/10 hover:border-primary/30 transition-all duration-300">
+          <div className="col-span-2 lg:col-span-1 p-4 md:p-6 rounded-2xl bg-background/5 backdrop-blur-sm border border-background/10 hover:bg-background/10 hover:border-primary/30 transition-all duration-300">
             <h4 className="text-sm md:text-base font-semibold mb-4 md:mb-6 text-background flex items-center gap-2">
               Contact
               <span className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent"></span>
