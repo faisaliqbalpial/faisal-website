@@ -26,9 +26,9 @@ export function Footer() {
 
       <div className="container-custom section-padding relative z-10">
         {/* Main footer content with box design */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-5 lg:gap-8">
           {/* Brand Box */}
-          <div className="col-span-1 sm:col-span-2 lg:col-span-1 p-6 rounded-2xl bg-background/5 backdrop-blur-sm border border-background/10 hover:bg-background/10 hover:border-primary/30 transition-all duration-300 group">
+          <div className="col-span-2 lg:col-span-1 p-4 md:p-6 rounded-2xl bg-background/5 backdrop-blur-sm border border-background/10 hover:bg-background/10 hover:border-primary/30 transition-all duration-300 group">
             <div className="space-y-4">
               <Link to="/" className="inline-block group-hover:scale-105 transition-transform duration-300">
                 <h3 className="text-2xl md:text-3xl font-bold">
@@ -57,8 +57,8 @@ export function Footer() {
           </div>
 
           {/* Quick Links Box */}
-          <div className="p-6 rounded-2xl bg-background/5 backdrop-blur-sm border border-background/10 hover:bg-background/10 hover:border-primary/30 transition-all duration-300">
-            <h4 className="text-base font-semibold mb-6 text-background flex items-center gap-2">
+          <div className="p-4 md:p-6 rounded-2xl bg-background/5 backdrop-blur-sm border border-background/10 hover:bg-background/10 hover:border-primary/30 transition-all duration-300">
+            <h4 className="text-sm md:text-base font-semibold mb-4 md:mb-6 text-background flex items-center gap-2">
               Quick Links
               <span className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent"></span>
             </h4>
@@ -79,8 +79,8 @@ export function Footer() {
           </div>
 
           {/* Services Box */}
-          <div className="p-6 rounded-2xl bg-background/5 backdrop-blur-sm border border-background/10 hover:bg-background/10 hover:border-primary/30 transition-all duration-300">
-            <h4 className="text-base font-semibold mb-6 text-background flex items-center gap-2">
+          <div className="p-4 md:p-6 rounded-2xl bg-background/5 backdrop-blur-sm border border-background/10 hover:bg-background/10 hover:border-primary/30 transition-all duration-300">
+            <h4 className="text-sm md:text-base font-semibold mb-4 md:mb-6 text-background flex items-center gap-2">
               Services
               <span className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent"></span>
             </h4>
@@ -93,8 +93,8 @@ export function Footer() {
           </div>
 
           {/* Contact Box */}
-          <div className="p-6 rounded-2xl bg-background/5 backdrop-blur-sm border border-background/10 hover:bg-background/10 hover:border-primary/30 transition-all duration-300">
-            <h4 className="text-base font-semibold mb-6 text-background flex items-center gap-2">
+          <div className="p-4 md:p-6 rounded-2xl bg-background/5 backdrop-blur-sm border border-background/10 hover:bg-background/10 hover:border-primary/30 transition-all duration-300">
+            <h4 className="text-sm md:text-base font-semibold mb-4 md:mb-6 text-background flex items-center gap-2">
               Contact
               <span className="h-px flex-1 bg-gradient-to-r from-primary/50 to-transparent"></span>
             </h4>
