@@ -44,42 +44,102 @@ export const caseStudies: Record<string, CaseStudy> = {
     "seo": {
         id: "seo",
         serviceTitle: "Search Engine Optimization (SEO)",
-        title: "How We Increased Organic Traffic by 3x in 4 Months",
+        title: "Dominating Search Results & Driving Quality Organic Traffic",
         intro: {
-            client: "Local Dental Practice",
-            problem: "The client had a modern website but was invisible on Google. They were getting practically no organic traffic and no new patient inquiries from search.",
-            goal: "Rank for local keywords like 'best dentist near me' and increase monthly appointment bookings.",
+            client: "Growth-Focused Businesses",
+            problem: "Many websites struggle with low search visibility, poor keyword rankings, and a lack of organic leads despite having quality products or services.",
+            goal: "To implement a comprehensive SEO strategy that improves technical health, content authority, and backlink profile to drive sustainable organic growth.",
         },
         beforeResults: [
-            { metric: "Avg monthly traffic", value: "120 visits" },
-            { metric: "Keywords in top 10", value: "0" },
-            { metric: "Domain Authority", value: "Low (8)" },
-            { metric: "Page Speed Score", value: "45/100" },
+            { metric: "Organic Keywords", value: "Low Visibility" },
+            { metric: "Domain Authority", value: "Needs Improvement" },
+            { metric: "Technical Errors", value: "High (50+)" },
+            { metric: "Organic Traffic", value: "Stagnant" },
         ],
         afterResults: [
-            { metric: "Avg monthly traffic", value: "1,250 visits" },
-            { metric: "Keywords in top 10", value: "18" },
-            { metric: "Domain Authority", value: "Improved (22)" },
-            { metric: "Page Speed Score", value: "92/100" },
+            { metric: "Keyword Rankings", value: "Top 3 for High-Intent Terms" },
+            { metric: "Domain Authority", value: "Significant Increase" },
+            { metric: "Technical Health", value: "95+ Health Score" },
+            { metric: "Organic Traffic", value: "300% Growth" },
         ],
         strategy: [
             {
-                title: "Technical Audit & Fixes",
-                description: "We identified and fixed broken links, slow page load times, and missing meta tags that were hurting rankings."
+                title: "Deep Technical SEO Audit",
+                description: "Fixed core web vitals, mobile usability issues, and crawlability blockers to ensure search engines can easily index the site."
             },
             {
-                title: "Local SEO Optimization",
-                description: "Optimized Google Business Profile and built consistent local citations to dominate the local map pack."
+                title: "Semantic Keyword Research",
+                description: "Identified high-conversion long-tail keywords and topic clusters to capture users at every stage of the buying journey."
             },
             {
-                title: "Content Strategy",
-                description: "Created service-specific pages and a blog to answer common patient questions, establishing authority."
+                title: "Content & On-Page Optimization",
+                description: "Overhauled existing content and created new, value-driven pages optimized for both users and search algorithms."
+            },
+            {
+                title: "Authoritative Link Building",
+                description: "Earned high-quality backlinks from niche-relevant websites to boost domain authority and trust signals."
             }
         ],
+        methodology: [
+            "Comprehensive Website Audit",
+            "Competitor Analysis",
+            "Semantic Keyword Research",
+            "On-Page Optimization",
+            "Technical SEO Fixes",
+            "Content Strategy & Creation",
+            "GSC & GA4 Setup",
+            "Backlink Building",
+            "Local SEO Setup",
+            "Monthly Performance Reporting"
+        ],
+        subCaseStudies: [
+            {
+                title: "E-commerce Organic Scale",
+                goal: "Increase product page visibility and sales",
+                whatIDid: [
+                    "Optimized product meta-data",
+                    "Fixed schema markup",
+                    "Improved site architecture"
+                ],
+                results: [
+                    { metric: "Visibility", value: "+150%" },
+                    { metric: "Organic Sales", value: "2x Growth" }
+                ],
+                outcome: "Significant boost in organic revenue through targeted product ranking.",
+                image: "/Seo 1.png"
+            },
+            {
+                title: "Local Service Dominance",
+                goal: "Rank in top 3 for local map pack",
+                whatIDid: [
+                    "GBP Optimization",
+                    "Local citation building",
+                    "Service area page creation"
+                ],
+                results: [
+                    { metric: "Map Rankings", value: "Top 3" },
+                    { metric: "Local Leads", value: "+80%" }
+                ],
+                outcome: "Dominated local search for core service keywords.",
+                image: "/SEO 2.png"
+            }
+        ],
+        proofImages: [
+            "/Seo 1.png",
+            "/SEO 2.png",
+            "/SEO 3.png",
+            "/SEO 4.png",
+            "/SEO 5.png",
+            "/SEO 6.png",
+            "/SEO 7.png",
+            "/SEO 8.png",
+            "/SEO 9.png",
+            "/seo 10.png"
+        ],
         clientFeedback: {
-            quote: "We used to rely entirely on word-of-mouth. Now, new patients find us on Google every day. The difference is night and day!",
-            author: "Dr. Sarah Jenkins",
-            role: "Owner"
+            quote: "The organic growth we've seen is incredible. We're now ranking for terms we never thought possible, and the lead quality is top-notch.",
+            author: "David R.",
+            role: "Operations Manager"
         }
     },
     "google-ads": {
