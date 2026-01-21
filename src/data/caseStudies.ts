@@ -109,18 +109,19 @@ export const caseStudies: Record<string, CaseStudy> = {
                 image: "/Seo 1.png"
             },
             {
-                title: "Local Service Dominance",
-                goal: "Rank in top 3 for local map pack",
+                title: "Authority & Backlink Building",
+                goal: "Increase domain authority and keyword stability",
                 whatIDid: [
-                    "GBP Optimization",
-                    "Local citation building",
-                    "Service area page creation"
+                    "Guest post outreach",
+                    "Niche edit acquisitions",
+                    "Broken link building",
+                    "Competitor backlink gap analysis"
                 ],
                 results: [
-                    { metric: "Map Rankings", value: "Top 3" },
-                    { metric: "Local Leads", value: "+80%" }
+                    { metric: "Domain Rating", value: "+15 Points" },
+                    { metric: "Backlinks Earned", value: "50+ High DA" }
                 ],
-                outcome: "Dominated local search for core service keywords.",
+                outcome: "Significantly boosted site authority, leading to stable top-tier rankings for competitive terms.",
                 image: "/SEO 2.png"
             }
         ],
