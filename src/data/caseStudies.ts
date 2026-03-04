@@ -106,7 +106,7 @@ export const caseStudies: Record<string, CaseStudy> = {
                     { metric: "Organic Sales", value: "2x Growth" }
                 ],
                 outcome: "Significant boost in organic revenue through targeted product ranking.",
-                image: "/Seo 1.png"
+                image: "/Seo 1.webp"
             },
             {
                 title: "Authority & Backlink Building",
@@ -122,20 +122,20 @@ export const caseStudies: Record<string, CaseStudy> = {
                     { metric: "Backlinks Earned", value: "50+ High DA" }
                 ],
                 outcome: "Significantly boosted site authority, leading to stable top-tier rankings for competitive terms.",
-                image: "/SEO 2.png"
+                image: "/SEO 2.webp"
             }
         ],
         proofImages: [
-            "/Seo 1.png",
-            "/SEO 2.png",
-            "/SEO 3.png",
-            "/SEO 4.png",
-            "/SEO 5.png",
-            "/SEO 6.png",
-            "/SEO 7.png",
-            "/SEO 8.png",
-            "/SEO 9.png",
-            "/seo 10.png"
+            "/Seo 1.webp",
+            "/SEO 2.webp",
+            "/SEO 3.webp",
+            "/SEO 4.webp",
+            "/SEO 5.webp",
+            "/SEO 6.webp",
+            "/SEO 7.webp",
+            "/SEO 8.webp",
+            "/SEO 9.webp",
+            "/seo 10.webp"
         ],
         clientFeedback: {
             quote: "The organic growth we've seen is incredible. We're now ranking for terms we never thought possible, and the lead quality is top-notch.",
@@ -199,7 +199,7 @@ export const caseStudies: Record<string, CaseStudy> = {
                     { metric: "Total Spend", value: "$44.2K" }
                 ],
                 outcome: "Consistent sales growth with high ROAS.",
-                image: "/Case Study 1.png"
+                image: "/Case Study 1.webp"
             },
             {
                 title: "Case Study 2: Low Click, High Result Strategy",
@@ -212,7 +212,7 @@ export const caseStudies: Record<string, CaseStudy> = {
                 ],
                 results: [],
                 outcome: "Less clicks, less cost—more profitable conversions.",
-                image: "/Case Study 2.png"
+                image: "/Case Study 2.webp"
             },
             {
                 title: "Case Study 3: Brand Reach + Sales",
@@ -222,7 +222,7 @@ export const caseStudies: Record<string, CaseStudy> = {
                     { metric: "Spend", value: "$40.9K" },
                     { metric: "Cost/Conv. Value", value: "22.98" }
                 ],
-                image: "/Case Study 3.png"
+                image: "/Case Study 3.webp"
             },
             {
                 title: "Case Study 4: Online Course",
@@ -243,15 +243,15 @@ export const caseStudies: Record<string, CaseStudy> = {
                     { metric: "CTR", value: "4.40%" }
                 ],
                 outcome: "The campaign generated high-quality phone leads with improved performance and efficient cost.",
-                image: "/Case Study 4.png"
+                image: "/Case Study 4.webp"
             }
         ],
         proofImages: [
-            "/Google Ads performance.png",
-            "/additional proofs of my Google Ads performance.png",
-            "/additional proofs of my Google Ads performance (2).png",
-            "/additional proofs of my Google Ads performance (3).png",
-            "/additional proofs of my Google Ads performance (4).png"
+            "/Google Ads performance.webp",
+            "/additional proofs of my Google Ads performance.webp",
+            "/additional proofs of my Google Ads performance (2).webp",
+            "/additional proofs of my Google Ads performance (3).webp",
+            "/additional proofs of my Google Ads performance (4).webp"
         ]
     },
     "facebook-ads": {
@@ -302,7 +302,7 @@ export const caseStudies: Record<string, CaseStudy> = {
                     { metric: "ROAS", value: "4.5x" }
                 ],
                 outcome: "Successfully scaled revenue with high ROAS.",
-                image: "/fbads1.jpeg"
+                image: "/fbads1.webp"
             },
             {
                 title: "Campaign 2: Retargeting Setup",
@@ -317,7 +317,7 @@ export const caseStudies: Record<string, CaseStudy> = {
                     { metric: "CPA", value: "$8.50" }
                 ],
                 outcome: "Recovered lost sales efficiently.",
-                image: "/fbads2.jpeg"
+                image: "/fbads2.webp"
             },
             {
                 title: "Campaign 3: Lead Generation",
@@ -332,15 +332,15 @@ export const caseStudies: Record<string, CaseStudy> = {
                     { metric: "Cost/Lead", value: "$2.80" }
                 ],
                 outcome: "Consistent lead flow at low cost.",
-                image: "/fbads3.jpeg"
+                image: "/fbads3.webp"
             }
         ],
         proofImages: [
-            "/fbads1.jpeg",
-            "/fbads2.jpeg",
-            "/fbads3.jpeg",
-            "/fbadskidstoybusiness.jpeg",
-            "/fbadswomensclothing.jpeg"
+            "/fbads1.webp",
+            "/fbads2.webp",
+            "/fbads3.webp",
+            "/fbadskidstoybusiness.webp",
+            "/fbadswomensclothing.webp"
         ],
         clientFeedback: {
             quote: "Our sales exploded within the first two months. The ROI has been incredible.",
@@ -431,7 +431,7 @@ export const caseStudies: Record<string, CaseStudy> = {
                     { metric: "Revenue", value: "DKK 38K" }
                 ],
                 outcome: "A single automation generated consistent passive revenue.",
-                image: "/emailmarketing2.png"
+                image: "/emailmarketing2.webp"
             },
             {
                 title: "Year-to-Date Growth",
@@ -447,7 +447,7 @@ export const caseStudies: Record<string, CaseStudy> = {
                     { metric: "Open Rate", value: "37.1%" }
                 ],
                 outcome: "Email became a primary revenue driver for the business.",
-                image: "/emailmarketing1.png"
+                image: "/emailmarketing1.webp"
             },
             {
                 title: "Campaign Optimization",
@@ -463,15 +463,15 @@ export const caseStudies: Record<string, CaseStudy> = {
                     { metric: "Click Rate", value: "2.4%" }
                 ],
                 outcome: "Achieved industry-leading open ratings and delivery.",
-                image: "/emailmarketing.png"
+                image: "/emailmarketing.webp"
             }
         ],
         proofImages: [
-            "/emailmarketing.png",
-            "/emailmarketing1.png",
-            "/emailmarketing2.png",
-            "/emailmarketing3.png",
-            "/emailmarketing4.png"
+            "/emailmarketing.webp",
+            "/emailmarketing1.webp",
+            "/emailmarketing2.webp",
+            "/emailmarketing3.webp",
+            "/emailmarketing4.webp"
         ],
         clientFeedback: {
             quote: "The automation runs itself and brings in sales while I sleep. Best investment we've made.",

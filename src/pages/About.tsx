@@ -43,7 +43,7 @@ export default function About() {
               {/* Profile Image */}
               <div className="relative w-full aspect-square sm:aspect-video md:aspect-[4/3] mb-8 overflow-hidden rounded-xl bg-secondary shadow-2xl border border-white/20 group">
                 <img
-                  src="/faisal.jpg"
+                  src="/faisal.webp"
                   alt="Faisal Iqbal"
                   className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out"
                 />
