@@ -1,6 +1,5 @@
-import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Search, Target, Facebook, Share2, Mail, Users, Globe, FolderCheck, Volume2, VolumeX, Play, Pause } from "lucide-react";
+import { ArrowRight, Search, Target, Facebook, Share2, Mail, Users, Globe, FolderCheck } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 import { CLIENT_COUNT } from "@/data/constants";
@@ -20,28 +19,6 @@ const stats = [
 ];
 
 export function HeroSection() {
-  const [isMuted, setIsMuted] = useState(true);
-  const [isPlaying, setIsPlaying] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const toggleMute = () => {
-    setIsMuted(!isMuted);
-    if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
-    }
-  };
-
-  const togglePlay = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
   return (
     <section className="relative min-h-0 flex flex-col justify-center bg-background overflow-hidden pt-20 pb-6">
       {/* Background decoration */}
@@ -116,33 +93,11 @@ export function HeroSection() {
 
               {/* Image Gradient Border Wrapper */}
               <div className="relative w-full h-full rounded-2xl p-1.5 bg-gradient-to-br from-primary/30 via-white/20 to-primary/10 shadow-2xl backdrop-blur-sm">
-                <video
-                  ref={videoRef}
-                  src="/email-marketing-manager.mp4"
-                  poster="/faisal.jpg"
-                  autoPlay
-                  loop
-                  muted={isMuted}
-                  playsInline
-                  preload="metadata"
+                <img
+                  src="/faisal.jpg"
+                  alt="Digital Marketing Expert"
                   className="w-full h-full object-cover rounded-xl shadow-inner bg-muted"
                 />
-                <div className="absolute bottom-4 right-4 flex gap-2 z-10">
-                  <button
-                    onClick={togglePlay}
-                    className="p-2 rounded-full bg-black/50 hover:bg-black/70 text-white backdrop-blur-sm transition-all duration-300"
-                    aria-label={isPlaying ? "Pause video" : "Play video"}
-                  >
-                    {isPlaying ? <Pause size={20} /> : <Play size={20} />}
-                  </button>
-                  <button
-                    onClick={toggleMute}
-                    className="p-2 rounded-full bg-black/50 hover:bg-black/70 text-white backdrop-blur-sm transition-all duration-300"
-                    aria-label={isMuted ? "Unmute video" : "Mute video"}
-                  >
-                    {isMuted ? <VolumeX size={20} /> : <Volume2 size={20} />}
-                  </button>
-                </div>
               </div>
 
               {/* Stats Cards - Floating */}
